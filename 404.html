@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body
+    class="bg-ethereal-dark selection:bg-teal-500 selection:text-white transition-colors duration-300 min-h-screen flex items-center justify-center text-center px-6 relative overflow-hidden">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Background Elements -->
+    <div aria-hidden="true" class="pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-gray-900 to-emerald-900/20"></div>
+        <div class="absolute inset-0 opacity-20 bg-hero-texture"></div>
+        <!-- Floating Orbs -->
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-teal-500/10 rounded-full blur-[80px] animate-pulse"></div>
+        <div
+            class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-emerald-500/10 rounded-full blur-[80px] animate-pulse animate-delay-2000">
+        </div>
+    </div>
+
+    <div
+        class="glass-panel p-12 max-w-lg w-full relative z-10 mx-auto transform hover:scale-105 transition-transform duration-500">
+        <div
+            class="absolute -top-20 left-1/2 -translate-x-1/2 text-[12rem] font-bold bg-gradient-to-b from-white/5 to-transparent bg-clip-text text-transparent select-none pointer-events-none">
+            404</div>
+        <div class="relative z-10">
+            <div class="mb-6 flex justify-center">
+                <i class="fa-solid fa-paintbrush text-4xl text-teal-400 animate-bounce"></i>
+            </div>
+            <h1 class="heading-display text-4xl mb-4 text-white">Oops! Blank Canvas</h1>
+            <p class="text-body-muted text-gray-300 mb-8 max-w-sm mx-auto">
+                The page you're looking for seems to have been erased or moved to a different gallery.
+            </p>
+            <a href="index.html" class="btn btn-primary inline-flex items-center">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Back to Studio
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

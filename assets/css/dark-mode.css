@@ -1,0 +1,1013 @@
+/* ========================================
+   DARK MODE / LIGHT MODE THEME
+   ArtSoul - Online Art Therapy & Wellness
+   ======================================== */
+
+/* Light Mode Theme Variables */
+.light-mode {
+    --bg-dark: #f9fafb;
+    /* gray-50 */
+    --bg-glass: rgba(0, 0, 0, 0.03);
+    --bg-glass-hover: rgba(0, 0, 0, 0.06);
+    --text-primary: #111827;
+    /* gray-900 */
+    --text-secondary: #6b7280;
+    /* gray-500 */
+    --text-muted: #9ca3af;
+    /* gray-400 */
+    --border-light: rgba(0, 0, 0, 0.1);
+    --border-accent: rgba(20, 184, 166, 0.4);
+}
+
+/* Dark Mode - Ensure Process Section Background */
+.dark #process-section,
+html.dark #process-section {
+    background-color: #111827 !important;
+    /* gray-900 */
+}
+
+/* Light Mode Class Overrides */
+.light-mode body {
+    background-color: #f9fafb;
+    color: #111827;
+}
+
+/* ================================
+   MOBILE MENU - LIGHT MODE
+   ================================ */
+.light-mode #mobile-menu {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.light-mode #close-menu-btn {
+    color: #111827;
+}
+
+.light-mode #mobile-menu nav a {
+    color: #111827;
+}
+
+.light-mode #mobile-menu nav a:first-child {
+    color: #0d9488;
+    /* teal-600 */
+}
+
+.light-mode #mobile-menu nav a:hover {
+    color: #0d9488;
+    /* teal-600 */
+}
+
+.light-mode #mobile-menu .flex.flex-col a:first-child {
+    color: #111827;
+    border-color: rgba(17, 24, 39, 0.1);
+}
+
+.light-mode #mobile-menu .flex.flex-col a:first-child:hover {
+    background: rgba(17, 24, 39, 0.05);
+}
+
+.light-mode #mobile-menu .flex.flex-col a:last-child {
+    background: #0d9488;
+    /* teal-600 */
+}
+
+.light-mode #mobile-menu .flex.flex-col a:last-child:hover {
+    background: #14b8a6;
+    /* teal-500 */
+}
+
+.light-mode .bg-gray-900 {
+    background-color: #f9fafb !important;
+}
+
+.light-mode .text-white {
+    color: #111827 !important;
+}
+
+.light-mode .text-gray-400 {
+    color: #6b7280 !important;
+}
+
+.light-mode .border-white\/10 {
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.light-mode .bg-white\/5 {
+    background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+.light-mode .border-white\/5 {
+    border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode .bg-hero-mesh {
+    opacity: 0.1 !important;
+}
+
+/* --- Visibility & Contrast Fixes for Homepage --- */
+
+/* Background Overrides */
+.light-mode .bg-gray-900,
+.light-mode .bg-slate-900,
+.light-mode section.bg-gray-900,
+.light-mode section.bg-slate-900 {
+    background-color: #f9fafb !important;
+}
+
+.light-mode .bg-gray-800,
+.light-mode .bg-slate-800 {
+    background-color: #ffffff !important;
+}
+
+/* Fix for specific hex backgrounds found on homepage */
+.light-mode [class*="bg-[#0aef]"],
+.light-mode [class*="bg-[#0a0f18]"],
+.light-mode [class*="bg-[#0a1118]"] {
+    background-color: #f3f4f6 !important;
+}
+
+/* Header & Navigation Fixes */
+.light-mode header {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.light-mode header .text-white {
+    color: #111827 !important;
+}
+
+.light-mode header .text-gray-400 {
+    color: #4b5563 !important;
+}
+
+.light-mode header .text-gray-400:hover {
+    color: #111827 !important;
+}
+
+/* Force header background to be light in light mode - especially when sticky */
+.light-mode header.bg-gray-900\/80,
+.light-mode header.backdrop-blur-md,
+.light-mode header.shadow-md {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    background-image: none !important;
+}
+
+
+/* Hero Section Mesh & Decor Fixes */
+.light-mode #hero-section {
+    background-color: #f0fdfa !important;
+}
+
+/* About Page Hero Section Light Mode Overrides */
+.light-mode #main-content h1 {
+    color: #111827 !important;
+}
+
+.light-mode #main-content h1.text-white {
+    color: #111827 !important;
+}
+
+.light-mode #main-content p {
+    color: #4b5563 !important;
+}
+
+.light-mode #main-content p.text-gray-300 {
+    color: #4b5563 !important;
+}
+
+.light-mode #main-content .text-teal-300 {
+    color: #0d9488 !important;
+}
+
+.light-mode #main-content .text-teal-400 {
+    color: #0d9488 !important;
+}
+
+/* Handle gradient text for light mode */
+.light-mode #main-content span.bg-clip-text {
+    background-image: linear-gradient(to right, #0f766e, #14b8a6, #0d9488) !important;
+}
+
+/* Mission Section and All bg-ethereal-dark sections Light Mode Overrides */
+.light-mode .bg-ethereal-dark h2.text-white {
+    color: #111827 !important;
+}
+
+.light-mode .bg-ethereal-dark p.text-gray-300 {
+    color: #4b5563 !important;
+}
+
+.light-mode .bg-ethereal-dark .text-teal-300 {
+    color: #0d9488 !important;
+}
+
+.light-mode .bg-ethereal-dark .text-teal-400 {
+    color: #0d9488 !important;
+}
+
+/* All gradient text in ethereal sections */
+.light-mode .bg-ethereal-dark span.bg-clip-text {
+    background-image: linear-gradient(to right, #0f766e, #14b8a6, #0d9488) !important;
+}
+
+.light-mode #hero-section .bg-gradient-to-br {
+    opacity: 0.1;
+    /* Soften background gradients */
+}
+
+.light-mode #hero-section .from-teal-500\/20 {
+    --tw-gradient-from: rgba(20, 184, 166, 0.05) !important;
+}
+
+/* Soften or hide dark absolute overlays in light mode */
+.light-mode .absolute.inset-0.bg-gradient-to-br,
+.light-mode .absolute.inset-0.bg-gradient-to-t,
+.light-mode .absolute.inset-0.bg-gradient-to-b,
+.light-mode .absolute.inset-0.bg-gray-900\/90,
+.light-mode .absolute.inset-0.mix-blend-multiply {
+    opacity: 0.1 !important;
+}
+
+/* Specifically for sections with hardcoded dark gradients in style tags */
+.light-mode section[style*="radial-gradient"],
+.light-mode div[style*="radial-gradient"] {
+    opacity: 0.4 !important;
+}
+
+
+/* Text Contrast Mapping */
+.light-mode .text-gray-200 {
+    color: #374151 !important;
+}
+
+.light-mode .text-gray-300 {
+    color: #4b5563 !important;
+}
+
+.light-mode .text-gray-400 {
+    color: #6b7280 !important;
+}
+
+/* Teal/Emerald Accent Boost for Light Mode */
+.light-mode .text-teal-200,
+.light-mode .text-teal-300 {
+    color: #0f766e !important;
+    /* teal-700 */
+    text-shadow: none !important;
+}
+
+.light-mode .text-emerald-300,
+.light-mode .text-emerald-400 {
+    color: #065f46 !important;
+    /* emerald-800 */
+}
+
+.light-mode .text-cyan-300,
+.light-mode .text-cyan-400 {
+    color: #155e75 !important;
+    /* cyan-800 */
+}
+
+.light-mode .text-purple-300 {
+    color: #7e22ce !important;
+    /* purple-700 */
+}
+
+/* Gradient Text Corrections */
+.light-mode .from-teal-200 {
+    --tw-gradient-from: #14b8a6 !important;
+}
+
+.light-mode .to-red-200 {
+    --tw-gradient-to: #10b981 !important;
+    /* emerald-500 */
+}
+
+.light-mode .from-red-200 {
+    --tw-gradient-from: #10b981 !important;
+    /* emerald-500 */
+}
+
+.light-mode .to-emerald-200 {
+    --tw-gradient-to: #10b981 !important;
+}
+
+/* Fix for service card overlays */
+.light-mode .group .absolute.inset-0.bg-gradient-to-br.from-gray-900\/95 {
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.6)) !important;
+}
+
+/* Services Section Grid Refinements (Homepage) */
+.light-mode #services h3 {
+    color: #111827 !important;
+}
+
+.light-mode #services .text-gray-400 {
+    color: #4b5563 !important;
+}
+
+/* Icon Container Contrast */
+.light-mode #services .w-16.h-16 {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(20, 184, 166, 0.3) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Interactive Links: Darker, not lighter, in light mode */
+.light-mode #services a.inline-flex {
+    color: #0f766e !important;
+    /* teal-700 */
+    font-weight: 700 !important;
+}
+
+.light-mode #services a.inline-flex:hover {
+    color: #111827 !important;
+    /* gray-900 */
+}
+
+/* View All Services Button Separator */
+.light-mode #services .bg-transparent.border-white\/20 {
+    background-color: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    color: #111827 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode #services .bg-transparent.border-white\/20:hover {
+    border-color: #14b8a6 !important;
+    background-color: #f0fdfa !important;
+}
+
+
+
+/* Dashboard & Card Specifics */
+.light-mode .bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(20, 184, 166, 0.2) !important;
+}
+
+.light-mode .bg-white\/5 {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.light-mode .border-white\/10,
+.light-mode .border-white\/20 {
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Hero Badge Correction */
+.light-mode .bg-white\/90 {
+    background-color: #ffffff !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Stats Counter Mapping */
+.light-mode .stat-number {
+    color: #111827 !important;
+}
+
+/* Footer Visibility */
+.light-mode footer {
+    background-color: #f3f4f6 !important;
+}
+
+.light-mode footer .text-gray-400 {
+    color: #4b5563 !important;
+}
+
+/* --- Consistency Fixes: Red to Emerald / Orange to Teal --- */
+
+/* Replace hardcoded orange accents from style.css */
+.light-mode .accent-line::before {
+    background: linear-gradient(180deg, #10b981, #14b8a6) !important;
+    /* emerald to teal */
+}
+
+/* Button Consistency */
+.light-mode .btn-primary,
+.light-mode button[type="submit"],
+.light-mode a[href="booking.html"].bg-white {
+    background-image: linear-gradient(to right, #ffffff, #f0fdfa) !important;
+    border: 1px solid rgba(16, 185, 129, 0.2) !important;
+    color: #0f766e !important;
+    /* teal-700 */
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1) !important;
+}
+
+.light-mode .btn-primary:hover,
+.light-mode button[type="submit"]:hover,
+.light-mode a[href="booking.html"].bg-white:hover {
+    background-color: #f0fdfa !important;
+    border-color: #10b981 !important;
+    box-shadow: 0 6px 16px rgba(16, 185, 129, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+/* Fix btn-outline for light mode */
+.light-mode .btn-outline {
+    background-color: transparent !important;
+    color: #111827 !important;
+    /* gray-900 - dark text for light mode */
+    border: 2px solid rgba(17, 24, 39, 0.2) !important;
+}
+
+.light-mode .btn-outline:hover {
+    background-color: rgba(17, 24, 39, 0.05) !important;
+    border-color: rgba(17, 24, 39, 0.4) !important;
+    color: #0d9488 !important;
+    /* teal-600 on hover */
+}
+
+/* Replace specific red text/icons site-wide in light mode */
+.light-mode .text-red-500,
+.light-mode .text-accent-orange {
+    color: #10b981 !important;
+    /* Force to emerald */
+}
+
+/* Fix for buttons with absolute gradients inside */
+.light-mode .group:hover .absolute.inset-0.bg-gradient-to-r.from-teal-500\/10 {
+    background-image: linear-gradient(to right, rgba(20, 184, 166, 0.1), rgba(16, 185, 129, 0.1)) !important;
+}
+
+
+/* High-Performance Stats Light Mode */
+.light-mode .bg-ethereal-dark {
+    background-color: #f8fafc !important;
+    background-image:
+        radial-gradient(at 0% 0%, rgba(20, 184, 166, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.05) 0px, transparent 50%) !important;
+}
+
+.light-mode .glass-card-premium {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.light-mode .glass-card-premium:hover {
+    background: #ffffff !important;
+    border-color: #14b8a6 !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.light-mode .aura-teal,
+.light-mode .aura-emerald,
+.light-mode .aura-cyan {
+    filter: none !important;
+    /* Avoid muddy glows in light mode */
+}
+
+/* ========================================
+   THEME TOGGLE BUTTON
+   ======================================== */
+
+#theme-toggle {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    z-index: 50;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1) rotate(15deg);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#theme-toggle i {
+    transition: transform 0.3s ease;
+}
+
+/* ========================================
+   SERVICES PAGE LIGHT MODE FIXES
+   ======================================== */
+
+/* Fix for Calculator Inputs in Light Mode */
+.light-mode .bg-gray-900\/50 {
+    background-color: #ffffff !important;
+    border-color: #d1d5db !important;
+    /* gray-300 */
+    color: #111827 !important;
+}
+
+.light-mode select.bg-gray-900\/50,
+.light-mode input.bg-gray-900\/50 {
+    background-image: none !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Fix for Services Grid Badges in Light Mode */
+.light-mode .bg-teal-900\/80 {
+    background-color: #f0fdfa !important;
+    border-color: #99f6e4 !important;
+    color: #134e4a !important;
+}
+
+.light-mode .bg-emerald-900\/80 {
+    background-color: #ecfdf5 !important;
+    border-color: #a7f3d0 !important;
+    color: #064e3b !important;
+}
+
+.light-mode .bg-cyan-900\/80 {
+    background-color: #ecfeff !important;
+    border-color: #a5f3fc !important;
+    color: #164e63 !important;
+}
+
+/* Override Badge Text Colors */
+.light-mode .bg-teal-900\/80 .text-teal-300 {
+    color: #134e4a !important;
+}
+
+.light-mode .bg-emerald-900\/80 .text-emerald-300 {
+    color: #064e3b !important;
+}
+
+.light-mode .bg-cyan-900\/80 .text-cyan-300 {
+    color: #164e63 !important;
+}
+
+/* Frequency Radio Button Active State Fix */
+.light-mode input[name="freq"]:checked+div {
+    color: #ffffff !important;
+    background-color: #0d9488 !important;
+    /* teal-600 */
+    border-color: #14b8a6 !important;
+}
+
+/* Gallery Filter Buttons Light Mode Fix */
+.light-mode #gallery-filters button {
+    background-color: #f3f4f6 !important;
+    /* gray-100 */
+    color: #4b5563 !important;
+    /* gray-600 */
+    border-color: #d1d5db !important;
+    /* gray-300 */
+}
+
+.light-mode #gallery-filters button:hover {
+    background-color: #e5e7eb !important;
+    /* gray-200 */
+    color: #111827 !important;
+    /* gray-900 */
+}
+
+/* Active state (Teal) */
+.light-mode #gallery-filters button.bg-teal-500 {
+    background-color: #14b8a6 !important;
+    /* teal-500 */
+    color: #ffffff !important;
+    border-color: #14b8a6 !important;
+}
+
+/* Gallery Hover Text Contrast Fix (Light Mode) */
+/* Gallery Hover Text Contrast Fix (Light Mode) - Scoped to Overlays */
+.light-mode .group:hover .absolute .text-white {
+    color: #ffffff !important;
+}
+
+.light-mode .group:hover .text-gray-200 {
+    color: #e5e7eb !important;
+}
+
+/* Strengthen Gallery Hover Overlay in Light Mode */
+.light-mode .group:hover .bg-gradient-to-t {
+    /* Create a stronger gradient from black to transparent to ensure white text pops */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%) !important;
+    opacity: 1 !important;
+}
+
+/* Gallery Hero Typography Fixes */
+/* "Community" part - ensure active visibility */
+.light-mode h1.text-white {
+    color: #111827 !important;
+    /* gray-900 */
+}
+
+/* Default (Dark Mode): Gradient Text */
+#gallery-hero-text {
+    background: linear-gradient(to right, #2dd4bf, #34d399);
+    /* teal-400 to emerald-400 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Light Mode: Solid Teal Text */
+.light-mode #gallery-hero-text {
+    background: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    -webkit-text-fill-color: initial !important;
+    color: #0d9488 !important;
+    /* teal-600 */
+}
+
+/* ========================================
+   HOME PAGE: LIGHT MODE SPECIFICS
+   ======================================== */
+
+/* Fix Service Cards in Light Mode */
+.light-mode #services .group.bg-white\/5 {
+    background-color: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.light-mode #services .group:hover {
+    border-color: rgba(20, 184, 166, 0.5) !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+    transform: translateY(-4px);
+}
+
+/* Ensure Text Visibility in Light Mode Cards */
+.light-mode #services h3.text-white {
+    color: #111827 !important;
+    /* Force black title */
+    text-shadow: none !important;
+}
+
+.light-mode #services p.text-gray-200 {
+    color: #4b5563 !important;
+    /* Force dark gray description */
+    text-shadow: none !important;
+}
+
+.light-mode #services .group:hover p.text-gray-200 {
+    color: #111827 !important;
+    /* Darker on hover */
+}
+
+/* Fix Icon Containers */
+.light-mode #services .w-16.h-16.bg-gradient-to-br {
+    background: #f0fdfa !important;
+    /* Light teal bg */
+    border-color: #ccfbf1 !important;
+}
+
+.light-mode #services i.text-teal-300 {
+    color: #0d9488 !important;
+    /* Darker teal icon */
+}
+
+.light-mode #services i.text-emerald-300 {
+    color: #059669 !important;
+    /* Darker emerald icon */
+}
+
+.light-mode #services i.text-cyan-300 {
+    color: #0891b2 !important;
+    /* Darker cyan icon */
+}
+
+/* Fix Links */
+.light-mode #services a.inline-flex {
+    color: #0f766e !important;
+    font-weight: 600 !important;
+}
+
+.light-mode #services a.inline-flex:hover {
+    color: #111827 !important;
+}
+
+/* Fix Stats Section in Light Mode */
+.light-mode #stats-section {
+    background-color: #f8fafc !important;
+    /* Light background */
+    background-image: none !important;
+}
+
+.light-mode #stats-section h2.text-white {
+    color: #111827 !important;
+}
+
+.light-mode #stats-section .stat-number {
+    color: #0d9488 !important;
+    /* Teal text instead of white/gradient */
+    background: none !important;
+    -webkit-text-fill-color: #0d9488 !important;
+    background-image: none !important;
+}
+
+.light-mode #stats-section .text-gray-400 {
+    color: #4b5563 !important;
+}
+
+/* Updated Stats Card Style for Light Mode */
+.light-mode #stats-section .glass-card-premium,
+.light-mode #stats-section .group .relative.bg-white\/5 {
+    background-color: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Fix Stats Icon Containers in Light Mode */
+.light-mode #stats-section .w-24.h-24 {
+    background: #f0fdfa !important;
+    /* Light teal bg */
+    border-color: #ccfbf1 !important;
+    box-shadow: none !important;
+}
+
+.light-mode #stats-section .w-24.h-24 i {
+    filter: none !important;
+    /* Remove glow in light mode for cleaner look */
+}
+
+/* Specific Icon Colors in Light Mode */
+.light-mode #stats-section .text-teal-400 {
+    color: #0d9488 !important;
+}
+
+.light-mode #stats-section .text-emerald-400 {
+    color: #059669 !important;
+}
+
+.light-mode #stats-section .text-cyan-400 {
+    color: #0891b2 !important;
+}
+
+.light-mode #stats-section .text-purple-400 {
+    color: #7e22ce !important;
+}
+
+
+/* Fix Testimonials in Light Mode */
+.light-mode #testimonials {
+    background-color: #f0fdfa !important;
+    /* Different light background to separate sections */
+}
+
+.light-mode #testimonials h2.text-white {
+    color: #111827 !important;
+}
+
+.light-mode #testimonials .testimonial-card {
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode #testimonials .group:hover .testimonial-card {
+    border-color: rgba(20, 184, 166, 0.4) !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode #testimonials p.text-gray-200 {
+    color: #374151 !important;
+}
+
+.light-mode #testimonials .text-gray-400 {
+    color: #6b7280 !important;
+}
+
+/* Fix Star Ratings in Light Mode (Ensure Teal/Emerald/Cyan visibility) */
+.light-mode #testimonials .text-teal-400 {
+    color: #0d9488 !important;
+    /* teal-600 */
+}
+
+.light-mode #testimonials .text-emerald-400 {
+    color: #059669 !important;
+    /* emerald-600 */
+}
+
+.light-mode #testimonials .text-cyan-400 {
+    color: #0891b2 !important;
+    /* cyan-600 */
+}
+
+/* ========================================
+   HERO SECTION LIGHT MODE FIXES
+   ======================================== */
+.light-mode #hero-section h1 .text-white {
+    color: #111827 !important;
+    /* Main Headline text */
+    text-shadow: none !important;
+}
+
+.light-mode #hero-section p.text-white {
+    color: #4b5563 !important;
+    /* Subheadline */
+    text-shadow: none !important;
+}
+
+/* Hero Feature Pills */
+.light-mode #hero-section .bg-white\/10 {
+    background-color: #ffffff !important;
+    border-color: rgba(20, 184, 166, 0.2) !important;
+    color: #0f766e !important;
+    /* teal-700 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode #hero-section .bg-white\/10 .text-white {
+    color: #0f766e !important;
+}
+
+/* Hero Secondary Button (Learn More) */
+.light-mode #hero-section a.border-white\/80 {
+    border-color: #0d9488 !important;
+    /* teal-600 */
+    color: #0d9488 !important;
+}
+
+.light-mode #hero-section a.border-white\/80:hover {
+    background-color: #0d9488 !important;
+    color: #ffffff !important;
+}
+
+/* ========================================
+   FOOTER LIGHT MODE FIXES
+   ======================================== */
+.light-mode footer {
+    background-color: #f1f5f9 !important;
+    /* slate-100 */
+    border-top-color: #e2e8f0 !important;
+}
+
+.light-mode footer .text-white {
+    color: #1e293b !important;
+    /* slate-800 */
+}
+
+.light-mode footer .text-gray-300 {
+    color: #475569 !important;
+    /* slate-600 */
+}
+
+.light-mode footer .text-gray-400 {
+    color: #64748b !important;
+    /* slate-500 */
+}
+
+.light-mode footer .text-gray-500 {
+    color: #94a3b8 !important;
+    /* slate-400 */
+}
+
+.light-mode footer .border-white\/20,
+.light-mode footer .border-white\/10 {
+    border-color: #cbd5e1 !important;
+    /* slate-300 */
+}
+
+.light-mode footer a:hover {
+    color: #0d9488 !important;
+    /* teal-600 */
+}
+
+.light-mode footer a.border:hover {
+    border-color: #0d9488 !important;
+    color: #0d9488 !important;
+}
+
+/* ========================================
+   BENEFITS SECTION LIGHT MODE FIXES
+   ======================================== */
+.light-mode #benefits-section {
+    background: linear-gradient(to bottom right, #f0fdfa, #ecfeff, #f0fdfa) !important;
+    /* Light teal/cyan gradient for light mode */
+}
+
+/* ========================================
+   PROCESS SECTION LIGHT MODE FIXES
+   ======================================== */
+/* Process Section - Allow dark mode background */
+/* .light-mode #process-section {
+    background-color: #ffffff !important;
+} */
+
+.light-mode #process-section h2.text-white,
+.light-mode #process-section h3.text-white {
+    color: #111827 !important;
+    /* Gray 900 */
+}
+
+.light-mode #process-section p.text-gray-300,
+.light-mode #process-section p.text-gray-400 {
+    color: #4b5563 !important;
+    /* Gray 600 */
+}
+
+/* Fix Cards in Light Mode */
+.light-mode #process-section .bg-white\/5 {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-color: #e2e8f0 !important;
+    /* Slate 200 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Fix Icons in Light Mode */
+.light-mode #process-section .bg-teal-900\/30 {
+    background-color: #f0fdfa !important;
+    /* Teal 50 */
+    color: #0d9488 !important;
+    /* Teal 600 */
+}
+
+.light-mode #process-section .bg-emerald-900\/30 {
+    background-color: #ecfdf5 !important;
+    /* Emerald 50 */
+    color: #059669 !important;
+    /* Emerald 600 */
+}
+
+.light-mode #process-section .bg-cyan-900\/30 {
+    background-color: #ecfeff !important;
+    /* Cyan 50 */
+    color: #0891b2 !important;
+    /* Cyan 600 */
+}
+
+/* ========================================
+   IMPROVED BUTTON VISIBILITY (LIGHT MODE)
+   ======================================== */
+
+/* "View All Services" / "View Gallery" Bordered Buttons */
+.light-mode a.border-2.border-white\/20,
+.light-mode .text-center .bg-transparent.border-white\/20,
+.light-mode .border-white\/30 {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    border-color: rgba(17, 24, 39, 0.3) !important;
+    color: #111827 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode a.border-2.border-white\/20:hover,
+.light-mode .text-center .bg-transparent.border-white\/20:hover,
+.light-mode .border-white\/30:hover {
+    background-color: #f0fdfa !important;
+    /* teal-50 */
+    border-color: #0d9488 !important;
+    /* teal-600 */
+    color: #0f766e !important;
+    /* teal-700 */
+    box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.15) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* "Explore" Text Links in Cards */
+.light-mode a.text-teal-400,
+.light-mode a.text-emerald-400,
+.light-mode a.text-cyan-400 {
+    font-weight: 800 !important;
+    text-shadow: none !important;
+}
+
+.light-mode .text-teal-400 {
+    color: #0d9488 !important;
+}
+
+.light-mode .text-emerald-400 {
+    color: #059669 !important;
+}
+
+.light-mode .text-cyan-400 {
+    color: #0891b2 !important;
+}
+
+/* Header "Login" Button Specifics */
+.light-mode header a[href="login.html"] {
+    background-color: transparent !important;
+    border-color: #1f2937 !important;
+    color: #1f2937 !important;
+}
+
+.light-mode header a[href="login.html"]:hover {
+    background-color: #f3f4f6 !important;
+    color: #000000 !important;
+}
+
+/* Newsletter Input Field Visibility (Future Proof) */
+.light-mode input[type="email"],
+.light-mode input[type="text"],
+.light-mode textarea,
+.light-mode select {
+    background-color: #ffffff !important;
+    border-color: #d1d5db !important;
+    /* gray-300 */
+    color: #111827 !important;
+}
+
+.light-mode input:focus,
+.light-mode textarea:focus {
+    border-color: #0d9488 !important;
+    /* teal-600 */
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1) !important;
+}

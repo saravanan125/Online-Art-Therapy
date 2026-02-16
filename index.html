@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtSoul - Online Art Therapy & Wellness Studio</title>
+    <meta name="description"
+        content="Premium online art therapy studio. Transform through creative expression from the comfort of your home.">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body class="font-sans bg-ethereal-dark text-white selection:bg-teal-500 selection:text-white">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation - Minimal -->
+    <header class="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-3xl font-display font-bold text-white">
+                    ArtSoul
+                </a>
+                <nav class="hidden md:flex items-center gap-12 text-sm font-medium uppercase tracking-wider">
+                    <a href="index.html" class="text-white border-b-2 border-teal-500 pb-1">Home</a>
+                    <a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                    <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <a href="login.html"
+                        class="px-6 py-3 text-sm font-bold uppercase tracking-wider text-white border border-white/30 hover:bg-white/10 transition-colors mr-3">
+                        Login
+                    </a>
+                    <a href="booking.html"
+                        class="bg-white text-teal-900 px-8 py-3 text-sm font-bold uppercase tracking-wider hover:bg-teal-50 transition-colors">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-white text-2xl p-2" aria-label="Open menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay-->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 z-[100] bg-gray-900/95 backdrop-blur-xl animate-fade-in transition-colors duration-300">
+
+        <!-- Close Button -->
+        <button id="close-menu-btn"
+            class="absolute top-6 right-6 text-white text-3xl p-2 hover:rotate-90 transition-transform duration-300 z-[110]"
+            aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Menu Content Container -->
+        <div class="h-full w-full flex flex-col items-center justify-start pt-24 pb-8 px-6 overflow-y-auto">
+            <nav class="flex flex-col items-center gap-5 text-lg font-medium uppercase tracking-wider">
+                <a href="index.html" class="text-teal-400 font-bold">Home</a>
+                <a href="about.html" class="text-white hover:text-teal-400 transition-colors">About</a>
+                <a href="services.html" class="text-white hover:text-teal-400 transition-colors">Services</a>
+                <a href="gallery.html" class="text-white hover:text-teal-400 transition-colors">Gallery</a>
+                <a href="contact.html" class="text-white hover:text-teal-400 transition-colors">Contact</a>
+            </nav>
+            <div class="flex flex-col gap-3 mt-6 w-64">
+                <a href="login.html" class="btn btn-outline btn-full">
+                    Login
+                </a>
+                <a href="booking.html" class="btn btn-primary btn-full">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hero Section - Interactive Gradient -->
+    <section class="relative min-h-screen flex items-center pt-16 overflow-hidden bg-ethereal-dark" id="hero-section">
+        <!-- Gradient Mesh Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-500/20 via-emerald-500/20 to-cyan-500/20 z-0"></div>
+        <!-- Hero Background Texture -->
+        <div class="absolute inset-0 opacity-40 mix-blend-overlay z-0">
+            <img src="assets/images/hero-texture.png" alt="Hero Texture" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-hero-mesh">
+        </div>
+
+        <!-- Particle Canvas for Cursor Effect -->
+        <canvas id="particle-canvas" class="absolute inset-0 pointer-events-none"></canvas>
+
+        <!-- Floating Decorative Shapes -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div
+                class="absolute top-20 left-10 w-32 h-32 bg-teal-400/20 rounded-full blur-3xl animate-pulse animate-duration-4000">
+            </div>
+            <div
+                class="absolute bottom-32 right-20 w-40 h-40 bg-emerald-400/20 rounded-full blur-3xl animate-pulse animate-duration-5000 animate-delay-1000">
+            </div>
+            <div
+                class="absolute top-1/3 right-1/4 w-24 h-24 bg-cyan-400/20 rounded-full blur-3xl animate-pulse animate-duration-6000 animate-delay-2000">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 pt-32 pb-10 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-20">
+                    <!-- Small Badge -->
+                    <div class="mb-8 fade-up">
+                        <span class="badge bg-white/90 text-teal-600">
+                            <i class="fa-solid fa-paintbrush text-red-500 text-sm"></i>
+                            Art Therapy &amp; Wellness
+                        </span>
+                    </div>
+
+                    <!-- Main Headline - Consistent Sizing -->
+                    <h1 class="heading-display lg:text-7xl mb-6 fade-up overflow-visible">
+                        <span class="text-white text-shadow-lg">Your </span>
+                        <span
+                            class="bg-gradient-to-r from-teal-200 to-red-200 bg-clip-text text-transparent italic">Canvas</span><span
+                            class="text-white text-shadow-lg">, Your </span>
+                        <span
+                            class="bg-gradient-to-r from-red-200 to-emerald-200 bg-clip-text text-transparent italic">Journey</span><span
+                            class="text-white text-shadow-lg">, Your </span>
+                        <span
+                            class="bg-gradient-to-r from-teal-200 to-red-200 bg-clip-text text-transparent font-bold italic">Healing</span>
+                    </h1>
+
+                    <!-- Subheadline - Enhanced -->
+                    <p
+                        class="text-body-muted text-white mb-12 max-w-3xl mx-auto fade-up text-shadow-sm animate-delay-200">
+                        Professional <span class="text-teal-200 font-semibold">online</span> art therapy sessions
+                        designed to help you discover healing, growth, and
+                        self-expression from the comfort of your home.
+                    </p>
+
+                    <!-- CTA Buttons - Redesigned -->
+                    <div
+                        class="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16 fade-up animate-delay-400">
+                        <a href="booking.html" class="btn btn-secondary btn-lg">
+                            Book a Session
+                        </a>
+                        <a href="about.html" class="btn btn-outline btn-lg">
+                            Learn More
+                        </a>
+                    </div>
+
+                    <!-- Feature Pills - New -->
+                    <div class="flex flex-wrap items-center justify-center gap-4 fade-up animate-delay-600">
+                        <div
+                            class="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full text-white text-sm font-medium">
+                            <i class="fa-solid fa-check-circle text-teal-300 mr-2"></i>Licensed Therapists
+                        </div>
+                        <div
+                            class="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full text-white text-sm font-medium">
+                            <i class="fa-solid fa-check-circle text-emerald-300 mr-2"></i>Flexible Scheduling
+                        </div>
+                        <div
+                            class="bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-3 rounded-full text-white text-sm font-medium">
+                            <i class="fa-solid fa-check-circle text-cyan-300 mr-2"></i>Safe Environment
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Stats Bar - Premium Minimalist Design -->
+    <!-- Benefits of Art Therapy Section -->
+    <section id="benefits-section"
+        class="relative py-32 overflow-hidden bg-gradient-to-br from-gray-900 via-teal-900/20 to-gray-900 dark:from-gray-900 dark:via-teal-900/10 dark:to-black">
+        <!-- Ambient Background Elements -->
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-teal-500/10 rounded-full blur-[120px] animate-pulse"></div>
+        <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px] animate-pulse"
+            style="animation-delay: 2s;"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <span class="badge badge-teal mb-6">
+                    <i class="fa-solid fa-heart text-[10px]"></i> Why Art Therapy
+                </span>
+                <h2 class="text-5xl md:text-7xl font-display font-bold text-white dark:text-white mb-6">
+                    Transform Through <span
+                        class="bg-gradient-to-r from-teal-300 via-emerald-300 to-cyan-300 bg-clip-text text-transparent italic">Creativity</span>
+                </h2>
+                <p class="text-body-muted max-w-2xl mx-auto">
+                    Discover the profound therapeutic benefits of expressive arts and heal through the power of creative
+                    self-discovery
+                </p>
+            </div>
+
+            <!-- Benefits Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <!-- Benefit 1: Emotional Expression -->
+                <div class="group relative fade-in-up animate-delay-100">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    </div>
+                    <div
+                        class="glass-panel group-hover:border-teal-500/30 hover:border-teal-500/40 h-full flex flex-col p-8 glass-panel-hover">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-br from-teal-500/30 to-teal-500/10 dark:from-teal-500/20 dark:to-teal-500/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                            <i
+                                class="fa-solid fa-palette text-teal-400 dark:text-teal-300 text-3xl drop-shadow-[0_0_10px_rgba(45,212,191,0.4)]"></i>
+                        </div>
+                        <h3
+                            class="text-2xl font-display font-bold text-white dark:text-white mb-4 group-hover:text-teal-300 transition-colors">
+                            Emotional Expression</h3>
+                        <p class="text-gray-400 dark:text-gray-400 leading-relaxed text-sm flex-grow">
+                            Express feelings that words alone cannot capture. Art provides a safe, non-verbal outlet for
+                            processing complex emotions and experiences.
+                        </p>
+                        <div
+                            class="mt-6 pt-4 border-t border-white/10 dark:border-white/5 flex items-center gap-2 text-teal-400 dark:text-teal-300 text-sm font-semibold group-hover:gap-3 transition-all">
+                            <span>Explore more</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 2: Stress Relief -->
+                <div class="group relative fade-in-up animate-delay-200">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    </div>
+                    <div
+                        class="glass-panel group-hover:border-teal-500/30 hover:border-emerald-500/40 h-full flex flex-col p-8 glass-panel-hover">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-br from-emerald-500/30 to-emerald-500/10 dark:from-emerald-500/20 dark:to-emerald-500/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500">
+                            <i
+                                class="fa-solid fa-spa text-emerald-400 dark:text-emerald-300 text-3xl drop-shadow-[0_0_10px_rgba(52,211,153,0.4)]"></i>
+                        </div>
+                        <h3
+                            class="text-2xl font-display font-bold text-white dark:text-white mb-4 group-hover:text-emerald-300 transition-colors">
+                            Stress Relief</h3>
+                        <p class="text-gray-400 dark:text-gray-400 leading-relaxed text-sm flex-grow">
+                            Experience deep relaxation and mindfulness through creative practice. Reduce anxiety and
+                            find
+                            calm in the therapeutic flow of artistic creation.
+                        </p>
+                        <div
+                            class="mt-6 pt-4 border-t border-white/10 dark:border-white/5 flex items-center gap-2 text-teal-400 dark:text-teal-300 text-sm font-semibold group-hover:gap-3 transition-all">
+                            <span>Discover how</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Personal Growth -->
+                <div class="group relative fade-in-up animate-delay-300">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    </div>
+                    <div
+                        class="glass-panel group-hover:border-teal-500/30 hover:border-cyan-500/40 h-full flex flex-col p-8 glass-panel-hover">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-br from-cyan-500/30 to-cyan-500/10 dark:from-cyan-500/20 dark:to-cyan-500/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                            <i
+                                class="fa-solid fa-seedling text-cyan-400 dark:text-cyan-300 text-3xl drop-shadow-[0_0_10px_rgba(34,211,238,0.4)]"></i>
+                        </div>
+                        <h3
+                            class="text-2xl font-display font-bold text-white dark:text-white mb-4 group-hover:text-cyan-300 transition-colors">
+                            Personal Growth</h3>
+                        <p class="text-gray-400 dark:text-gray-400 leading-relaxed text-sm flex-grow">
+                            Gain deeper self-awareness and insight into your thoughts and behaviors. Build confidence
+                            and
+                            develop new coping strategies through creative exploration.
+                        </p>
+                        <div
+                            class="mt-6 pt-4 border-t border-white/10 dark:border-white/5 flex items-center gap-2 text-teal-400 dark:text-teal-300 text-sm font-semibold group-hover:gap-3 transition-all">
+                            <span>Start growing</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefit 4: Creative Healing -->
+                <div class="group relative fade-in-up animate-delay-400">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    </div>
+                    <div
+                        class="glass-panel group-hover:border-teal-500/30 hover:border-purple-500/40 h-full flex flex-col p-8 glass-panel-hover">
+                        <div
+                            class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-purple-500/10 dark:from-purple-500/20 dark:to-purple-500/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500">
+                            <i
+                                class="fa-solid fa-wand-magic-sparkles text-purple-400 dark:text-purple-300 text-3xl drop-shadow-[0_0_10px_rgba(192,132,252,0.4)]"></i>
+                        </div>
+                        <h3
+                            class="text-2xl font-display font-bold text-white dark:text-white mb-4 group-hover:text-purple-300 transition-colors">
+                            Creative Healing</h3>
+                        <p class="text-gray-400 dark:text-gray-400 leading-relaxed text-sm flex-grow">
+                            Unlock your innate creativity and resilience. Transform pain into beauty and discover new
+                            pathways to healing through the therapeutic power of art.
+                        </p>
+                        <div
+                            class="mt-6 pt-4 border-t border-white/10 dark:border-white/5 flex items-center gap-2 text-teal-400 dark:text-teal-300 text-sm font-semibold group-hover:gap-3 transition-all">
+                            <span>Begin healing</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-16 fade-in-up animate-delay-500">
+                <a href="services.html" class="btn btn-primary btn-lg inline-flex items-center gap-3 group">
+                    <span>Explore Our Therapeutic Services</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - Ethereal Glow Design -->
+    <section class="py-32 bg-ethereal-dark relative overflow-hidden" id="services">
+        <!-- Geometric Background -->
+
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-900 to-transparent">
+        </div>
+
+        <!-- Floating Elements matching Hero -->
+        <div class="absolute top-40 right-10 w-40 h-40 bg-teal-500/5 rounded-full blur-3xl animate-float-slow"></div>
+        <div
+            class="absolute bottom-40 left-10 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl animate-float-slow animate-delay-1000">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-24">
+                <span
+                    class="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-teal-400 border border-white/5 mb-6">
+                    <i class="fa-solid fa-star text-[10px]"></i> Our Offerings
+                </span>
+                <h2 class="text-5xl md:text-6xl font-display font-bold text-white mb-6">
+                    Curated <span
+                        class="bg-gradient-to-r from-teal-200 to-red-200 bg-clip-text text-transparent italic">Pathways</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto font-light text-lg">
+                    Discover our specialized approaches to creativity and healing, designed to align with your personal
+                    journey.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div
+                    class="group relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-teal-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-900/20 overflow-hidden">
+                    <!-- Background Image -->
+                    <div class="absolute inset-0">
+                        <img src="assets/images/service-art-v2.png" alt="Art Therapy"
+                            class="w-full h-full object-cover opacity-30 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/80 to-gray-900/50">
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 border border-white/10">
+                            <i class="fa-solid fa-paintbrush text-2xl text-teal-300"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-display font-medium text-white mb-4 drop-shadow-md">Virtual Art Therapy
+                        </h3>
+                        <p
+                            class="text-gray-200 leading-relaxed mb-8 font-light drop-shadow-sm group-hover:text-white transition-colors">
+                            Express emotions through creative processes guided by professional therapists via secure
+                            video. A journey of self-discovery from home.
+                        </p>
+
+                        <a href="service-details.html"
+                            class="inline-flex items-center text-sm font-bold uppercase tracking-wider text-teal-400 hover:text-teal-300 transition-colors drop-shadow-md">
+                            Explore <i
+                                class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="group relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-emerald-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-900/20 overflow-hidden">
+                    <!-- Background Image -->
+                    <div class="absolute inset-0">
+                        <img src="assets/images/service-mindfulness.png" alt="Mindfulness"
+                            class="w-full h-full object-cover opacity-30 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/80 to-gray-900/50">
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 border border-white/10">
+                            <i class="fa-solid fa-brain text-2xl text-emerald-300"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-display font-medium text-white mb-4 drop-shadow-md">Digital Mindfulness
+                        </h3>
+                        <p
+                            class="text-gray-200 leading-relaxed mb-8 font-light drop-shadow-sm group-hover:text-white transition-colors">
+                            Cultivate presence and reduce stress through guided online meditation and mindful practices
+                            designed for modern digital life.
+                        </p>
+
+                        <a href="service-details.html"
+                            class="inline-flex items-center text-sm font-bold uppercase tracking-wider text-emerald-400 hover:text-emerald-300 transition-colors drop-shadow-md">
+                            Explore <i
+                                class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="group relative bg-white/5 backdrop-blur-md rounded-3xl p-8 border border-white/10 hover:border-cyan-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-900/20 overflow-hidden">
+                    <!-- Background Image -->
+                    <div class="absolute inset-0">
+                        <img src="assets/images/service-counseling.png" alt="Counseling"
+                            class="w-full h-full object-cover opacity-30 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700 grayscale group-hover:grayscale-0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-gray-900/80 to-gray-900/50">
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 border border-white/10">
+                            <i class="fa-solid fa-comments text-2xl text-cyan-300"></i>
+                        </div>
+
+                        <h3 class="text-2xl font-display font-medium text-white mb-4 drop-shadow-md">Remote Counseling
+                        </h3>
+                        <p
+                            class="text-gray-200 leading-relaxed mb-8 font-light drop-shadow-sm group-hover:text-white transition-colors">
+                            Professional talk therapy to navigate life challenges. Secure, confidential, and accessible
+                            wherever you are.
+                        </p>
+
+                        <a href="service-details.html"
+                            class="inline-flex items-center text-sm font-bold uppercase tracking-wider text-cyan-400 hover:text-cyan-300 transition-colors drop-shadow-md">
+                            Explore <i
+                                class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Button -->
+            <div class="text-center mt-16">
+                <a href="services.html"
+                    class="group relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-bold text-white transition-all duration-300 bg-transparent border-2 border-white/20 rounded-full hover:bg-white/10 hover:border-teal-500/50">
+                    <span class="mr-2 text-sm uppercase tracking-widest">View All Services</span>
+                    <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview Section - New -->
+    <section class="py-20 bg-ethereal-dark relative border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-5xl md:text-6xl font-display font-bold text-white mb-2">Recent <span
+                            class="bg-gradient-to-r from-teal-200 to-cyan-200 bg-clip-text text-transparent italic">Creations</span>
+                    </h2>
+                    <p class="text-gray-400 text-sm">Glimpses into the healing process</p>
+                </div>
+                <a href="gallery.html"
+                    class="text-teal-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest hidden md:block">View
+                    Gallery <i class="fa-solid fa-arrow-right ml-2"></i></a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative group overflow-hidden rounded-2xl h-64">
+                    <img src="https://picsum.photos/seed/gal1/600/800" alt="Gallery 1"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white text-xs font-bold uppercase tracking-widest">Expression</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl h-64 md:mt-12">
+                    <img src="https://picsum.photos/seed/gal2/600/800" alt="Gallery 2"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white text-xs font-bold uppercase tracking-widest">Flow</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl h-64">
+                    <img src="https://picsum.photos/seed/gal3/600/800" alt="Gallery 3"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white text-xs font-bold uppercase tracking-widest">Growth</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl h-64 md:mt-12">
+                    <img src="https://picsum.photos/seed/gal4/600/800" alt="Gallery 4"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white text-xs font-bold uppercase tracking-widest">Peace</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials - Ethereal Glow Design -->
+    <section class="py-32 bg-ethereal-dark relative overflow-hidden" id="testimonials">
+        <!-- Dark Gradient Background -->
+
+
+        <!-- Blurred Accent Orbs -->
+        <div class="absolute left-0 top-1/4 w-96 h-96 bg-teal-500/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
+        <div
+            class="absolute right-0 bottom-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Header -->
+            <div class="text-center mb-24">
+                <i class="fa-solid fa-quote-left text-4xl text-teal-500/30 mb-8 block animate-pulse"></i>
+                <h2 class="text-5xl md:text-6xl font-display font-bold text-white leading-tight mb-8">
+                    "A sanctuary that feels like <br /><span class="text-teal-200 italic">magic</span>."
+                </h2>
+                <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-teal-500 to-transparent mx-auto"></div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="group relative h-full fade-up animate-delay-100">
+                    <div
+                        class="testimonial-card testimonial-card-teal h-full flex flex-col justify-between p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-teal-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-teal-900/10">
+                        <div>
+                            <div class="flex gap-1 text-teal-400 mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="relative z-10 text-lg text-gray-200 font-light italic mb-8 leading-relaxed">
+                                "Art therapy gave me a voice when words weren't enough. The environment here is so
+                                calming
+                                and ethereal, it feels like stepping into another world."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-white/10 pt-6">
+                            <div
+                                class="w-12 h-12 rounded-full p-[2px] bg-gradient-to-br from-teal-500 to-emerald-500 overflow-hidden">
+                                <img src="assets/images/avatar-sarah.png" alt="Sarah Mitchell"
+                                    class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-500">
+                            </div>
+                            <div>
+                                <div
+                                    class="text-xs font-bold uppercase tracking-[0.2em] text-white group-hover:text-teal-300 transition-colors">
+                                    Sarah Mitchell
+                                </div>
+                                <div class="text-[10px] uppercase tracking-[0.1em] text-gray-400">Virtual Client
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="group relative h-full fade-up animate-delay-200">
+                    <div
+                        class="testimonial-card testimonial-card-emerald h-full flex flex-col justify-between p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-emerald-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-900/10">
+                        <div>
+                            <div class="flex gap-1 text-emerald-400 mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="relative z-10 text-lg text-gray-200 font-light italic mb-8 leading-relaxed">
+                                "The mindfulness workshops are incredible. The aesthetics alone put you in a state of
+                                flow.
+                                It's refined, professional, and deeply healing."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-white/10 pt-6">
+                            <div
+                                class="w-12 h-12 rounded-full p-[2px] bg-gradient-to-br from-emerald-500 to-teal-500 overflow-hidden">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Laurent"
+                                    class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-500">
+                            </div>
+                            <div>
+                                <div
+                                    class="text-xs font-bold uppercase tracking-[0.2em] text-white group-hover:text-emerald-300 transition-colors">
+                                    James Laurent</div>
+                                <div class="text-[10px] uppercase tracking-[0.1em] text-gray-400">Online Member
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="group relative h-full fade-up animate-delay-300">
+                    <div
+                        class="testimonial-card testimonial-card-cyan h-full flex flex-col justify-between p-8 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-cyan-500/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-900/10">
+                        <div>
+                            <div class="flex gap-1 text-cyan-400 mb-6 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <p class="relative z-10 text-lg text-gray-200 font-light italic mb-8 leading-relaxed">
+                                "I was skeptical about online therapy, but this platform changed everything. Secure,
+                                beautiful, and effectively transformative."
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4 border-t border-white/10 pt-6">
+                            <div
+                                class="w-12 h-12 rounded-full p-[2px] bg-gradient-to-br from-cyan-500 to-blue-500 overflow-hidden">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Elena Rodriguez"
+                                    class="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-500">
+                            </div>
+                            <div>
+                                <div
+                                    class="text-xs font-bold uppercase tracking-[0.2em] text-white group-hover:text-cyan-300 transition-colors">
+                                    Elena Rodriguez</div>
+                                <div class="text-[10px] uppercase tracking-[0.1em] text-gray-400">Remote Patient
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section - Your Healing Journey -->
+    <section id="process-section"
+        class="py-24 relative overflow-hidden bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-hero-pattern opacity-[0.03] dark:opacity-[0.05]"></div>
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-500/20 to-transparent">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-20 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-display font-light text-gray-900 dark:text-white mb-6">
+                    Your Journey to <span
+                        class="bg-gradient-to-r from-teal-600 to-emerald-600 dark:from-teal-300 dark:to-emerald-300 bg-clip-text text-transparent italic font-serif">Healing</span>
+                </h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 font-light">
+                    Embark on a path of self-discovery and renewal through our structured creative process.
+                </p>
+            </div>
+
+            <!-- 3-Step Grid -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                <!-- Step 1: Connect -->
+                <div class="group relative fade-in-up animate-delay-100">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-emerald-500/5 rounded-3xl transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div
+                        class="relative p-8 bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-100 dark:border-white/10 rounded-3xl h-full hover:shadow-xl hover:shadow-teal-900/5 dark:hover:shadow-teal-900/20 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-teal-50 dark:bg-teal-900/30 text-teal-600 dark:text-teal-300 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-regular fa-comments"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">1. Connect</h3>
+                        <p class="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+                            Start with a free consultation to discuss your needs and match you with the perfect art
+                            therapist.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2: Create -->
+                <div class="group relative fade-in-up animate-delay-200">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-500/5 rounded-3xl transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div
+                        class="relative p-8 bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-100 dark:border-white/10 rounded-3xl h-full hover:shadow-xl hover:shadow-emerald-900/5 dark:hover:shadow-emerald-900/20 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-300 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-paintbrush"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">2. Create</h3>
+                        <p class="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+                            Express yourself through guided art sessions, using colors and forms to explore your inner
+                            world.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3: Transform -->
+                <div class="group relative fade-in-up animate-delay-300">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl transform group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div
+                        class="relative p-8 bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-gray-100 dark:border-white/10 rounded-3xl h-full hover:shadow-xl hover:shadow-cyan-900/5 dark:hover:shadow-cyan-900/20 transition-all duration-300">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-300 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-regular fa-sun"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">3. Transform</h3>
+                        <p class="text-gray-600 dark:text-gray-400 font-light leading-relaxed">
+                            Experience healing and personal growth as you process emotions and gain new perspectives.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="text-center fade-in-up animate-delay-400">
+                <a href="booking.html" class="btn btn-secondary btn-lg shadow-lg hover:shadow-xl group">
+                    <span>Start Your Journey Today</span>
+                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Ethereal Dark -->
+    <footer class="bg-ethereal-dark py-16 border-t border-white/10 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="text-3xl font-display font-bold mb-6 text-white">ArtSoul</div>
+                    <p class="text-gray-400 mb-6 font-light">
+                        Contemporary art therapy &amp; wellness studio.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="hover:text-teal-400 transition-colors">About</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Services</a></li>
+                        <li><a href="gallery.html" class="hover:text-teal-400 transition-colors">Gallery</a>
+                        </li>
+                        <li><a href="blog.html" class="hover:text-teal-400 transition-colors">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Individual
+                                Therapy</a></li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Group
+                                Workshops</a></li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Mindful
+                                Art</a></li>
+                        <li><a href="booking.html" class="hover:text-teal-400 transition-colors">Book
+                                Session</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Contact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-teal-500"></i>
+                            <span>hello@artsoul.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone mt-1 text-teal-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2025 ArtSoul. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Terms</a>
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - ArtSoul</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body
+    class="bg-ethereal-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 selection:bg-teal-500 selection:text-white">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside class="w-64 glass-panel border-r border-white/10 text-white hidden md:flex flex-col rounded-none h-full">
+            <div class="p-6 border-b border-white/10">
+                <a href="index.html" class="text-2xl font-display font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-paintbrush text-teal-400"></i> ArtSoul <span
+                        class="text-xs bg-teal-500 px-2 py-0.5 rounded text-white ml-2">Admin</span>
+                </a>
+            </div>
+
+            <nav class="flex-1 p-4 space-y-1 overflow-y-auto">
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 bg-primary text-white rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-gauge w-5 text-center"></i> Dashboard
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-white/10 rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-users w-5 text-center"></i> Users
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-white/10 rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-calendar-days w-5 text-center"></i> Bookings
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-white/10 rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-folder-open w-5 text-center"></i> Content
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-4 py-3 text-gray-300 hover:bg-white/10 rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-gear w-5 text-center"></i> Settings
+                </a>
+            </nav>
+
+            <div class="p-4 border-t border-white/10">
+                <a href="index.html"
+                    class="flex items-center gap-3 px-4 py-3 text-red-400 hover:bg-red-900/30 rounded-lg font-medium transition-colors">
+                    <i class="fa-solid fa-arrow-right-from-bracket w-5 text-center"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto bg-transparent">
+            <!-- Mobile Header -->
+            <header
+                class="md:hidden bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700 p-4 flex justify-between items-center">
+                <a href="index.html"
+                    class="text-xl font-serif font-bold text-primary dark:text-white flex items-center gap-2">
+                    <i class="fa-solid fa-paintbrush text-secondary"></i> ArtSoul Admin
+                </a>
+                <button class="text-gray-600 dark:text-gray-300"><i class="fa-solid fa-bars text-xl"></i></button>
+            </header>
+
+            <div class="p-6 md:p-10 max-w-7xl mx-auto">
+                <!-- Header -->
+                <div class="flex justify-between items-center mb-10">
+                    <h1 class="text-3xl font-display font-bold text-white">Dashboard Overview</h1>
+                    <button
+                        class="bg-gradient-to-r from-teal-500 to-emerald-500 text-white px-6 py-2.5 rounded-xl font-bold uppercase tracking-wider text-sm hover:from-teal-400 hover:to-emerald-400 transition-all shadow-lg shadow-teal-500/30 hover:scale-105">
+                        <i class="fa-solid fa-plus mr-2"></i> New Session
+                    </button>
+                </div>
+
+                <!-- Stats Grid -->
+                <div class="grid md:grid-cols-4 gap-6 mb-10">
+                    <div class="glass-panel glass-panel-hover p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <p class="text-sm text-gray-400">Total Users</p>
+                                <h3 class="text-3xl font-bold text-white mt-1">2,543</h3>
+                            </div>
+                            <div
+                                class="p-2 bg-emerald-500/20 text-emerald-400 rounded-lg text-xs font-bold border border-emerald-500/30">
+                                +12%</div>
+                        </div>
+                        <div class="h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
+                            <div class="h-full bg-teal-500 w-2/3 shadow-[0_0_10px_rgba(20,184,166,0.5)]"></div>
+                        </div>
+                    </div>
+                    <div class="glass-panel glass-panel-hover p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <p class="text-sm text-gray-400">Active Sessions</p>
+                                <h3 class="text-3xl font-bold text-white mt-1">45</h3>
+                            </div>
+                            <div
+                                class="p-2 bg-emerald-500/20 text-emerald-400 rounded-lg text-xs font-bold border border-emerald-500/30">
+                                +5%</div>
+                        </div>
+                        <div class="h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
+                            <div class="h-full bg-purple-500 w-1/2 shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
+                        </div>
+                    </div>
+                    <div class="glass-panel glass-panel-hover p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <p class="text-sm text-gray-400">Revenue (Mo)</p>
+                                <h3 class="text-3xl font-bold text-white mt-1">$12.4k</h3>
+                            </div>
+                            <div
+                                class="p-2 bg-red-500/20 text-red-400 rounded-lg text-xs font-bold border border-red-500/30">
+                                -2%</div>
+                        </div>
+                        <div class="h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
+                            <div class="h-full bg-emerald-500 w-3/4 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
+                        </div>
+                    </div>
+                    <div class="glass-panel glass-panel-hover p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <p class="text-sm text-gray-400">Pending Bookings</p>
+                                <h3 class="text-3xl font-bold text-white mt-1">18</h3>
+                            </div>
+                            <div
+                                class="p-2 bg-amber-500/20 text-amber-400 rounded-lg text-xs font-bold border border-amber-500/30">
+                                Action</div>
+                        </div>
+                        <div class="h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
+                            <div class="h-full bg-amber-500 w-1/4 shadow-[0_0_10px_rgba(245,158,11,0.5)]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Bookings Table -->
+                <div class="glass-panel overflow-hidden">
+                    <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                        <h2 class="text-lg font-bold text-white">Recent Bookings</h2>
+                        <div class="flex gap-2">
+                            <input type="text" placeholder="Search..." class="form-input px-4 py-2 text-sm bg-white/5">
+                            <button
+                                class="w-9 h-9 flex items-center justify-center rounded-lg border border-white/10 text-gray-400 hover:text-white hover:bg-white/10 transition-colors"><i
+                                    class="fa-solid fa-filter"></i></button>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-white/5 text-xs text-gray-400 uppercase tracking-wider">
+                                    <th class="p-4 font-semibold">User</th>
+                                    <th class="p-4 font-semibold">Session</th>
+                                    <th class="p-4 font-semibold">Date</th>
+                                    <th class="p-4 font-semibold">Status</th>
+                                    <th class="p-4 font-semibold text-right">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-white/10">
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="p-4 flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-br from-teal-500 to-emerald-500 flex items-center justify-center text-xs font-bold text-white">
+                                            JC</div>
+                                        <span class="font-semibold text-white">Jane Cooper</span>
+                                    </td>
+                                    <td class="p-4 text-gray-300">Expressive Painting</td>
+                                    <td class="p-4 text-gray-300">Oct 24, 2025</td>
+                                    <td class="p-4"><span
+                                            class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Confirmed</span>
+                                    </td>
+                                    <td class="p-4 text-right"><button
+                                            class="text-gray-400 hover:text-teal-400 transition-colors"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="p-4 flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-xs font-bold text-white">
+                                            CF</div>
+                                        <span class="font-semibold text-white">Cody Fisher</span>
+                                    </td>
+                                    <td class="p-4 text-gray-300">Mindfulness Sketching</td>
+                                    <td class="p-4 text-gray-300">Oct 25, 2025</td>
+                                    <td class="p-4"><span
+                                            class="px-2.5 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">Pending</span>
+                                    </td>
+                                    <td class="p-4 text-right"><button
+                                            class="text-gray-400 hover:text-teal-400 transition-colors"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                                </tr>
+                                <tr class="hover:bg-white/5 transition-colors">
+                                    <td class="p-4 flex items-center gap-3">
+                                        <div
+                                            class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-xs font-bold text-white">
+                                            EH</div>
+                                        <span class="font-semibold text-white">Esther Howard</span>
+                                    </td>
+                                    <td class="p-4 text-gray-300">Group Art Circle</td>
+                                    <td class="p-4 text-gray-300">Oct 28, 2025</td>
+                                    <td class="p-4"><span
+                                            class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Confirmed</span>
+                                    </td>
+                                    <td class="p-4 text-right"><button
+                                            class="text-gray-400 hover:text-teal-400 transition-colors"><i
+                                                class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

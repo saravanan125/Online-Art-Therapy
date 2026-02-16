@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ArtSoul</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-ethereal-dark text-white font-sans selection:bg-teal-500 selection:text-white relative overflow-hidden">
+
+    <!-- Background Elements -->
+    <div aria-hidden="true" class="pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-gray-900 to-emerald-900/20"></div>
+        <div class="absolute inset-0 opacity-20 mix-blend-overlay bg-hero-texture"></div>
+    </div>
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <div class="min-h-screen flex items-center justify-center p-4 relative z-10">
+        <div class="glass-panel overflow-hidden max-w-4xl w-full grid md:grid-cols-2 shadow-2xl">
+
+            <!-- Illustration Side -->
+            <div
+                class="bg-gradient-to-br from-teal-900/40 to-emerald-900/40 hidden md:flex flex-col items-center justify-center p-12 relative overflow-hidden">
+                <div class="absolute inset-0 opacity-30 mix-blend-overlay bg-hero-texture"></div>
+
+                <!-- Decorative Glows -->
+                <div
+                    class="absolute top-0 left-0 w-64 h-64 bg-teal-500/20 rounded-full blur-3xl -translate-x-1/3 -translate-y-1/3">
+                </div>
+                <div
+                    class="absolute bottom-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3">
+                </div>
+
+                <div class="relative z-10 text-center text-white">
+                    <h2 class="text-4xl font-display font-bold mb-4 leading-tight">Welcome Back to <span
+                            class="text-teal-400 italic">ArtSoul</span></h2>
+                    <p class="mb-8 text-gray-300 font-light text-lg">Continue your journey of healing, creativity, and
+                        inner peace.</p>
+                </div>
+
+                <!-- Floating Icons Animation -->
+                <div class="absolute inset-0 pointer-events-none">
+                    <i class="fa-solid fa-paintbrush text-white/5 absolute top-1/4 left-1/4 text-4xl animate-pulse"></i>
+                    <i
+                        class="fa-solid fa-palette text-white/5 absolute bottom-1/3 right-1/4 text-5xl animate-bounce animate-duration-3000"></i>
+                </div>
+            </div>
+
+            <!-- Form Side -->
+            <div class="p-8 md:p-12 flex flex-col justify-center bg-gray-900/50">
+                <div class="mb-8 text-center md:text-left">
+                    <a href="index.html"
+                        class="text-2xl font-display font-bold text-white flex items-center justify-center md:justify-start gap-2 mb-6 hover:text-teal-400 transition-colors">
+                        <i class="fa-solid fa-paintbrush text-teal-500"></i> ArtSoul
+                    </a>
+                    <h1 class="text-3xl font-display font-bold text-white mb-2">Sign In</h1>
+                    <p class="text-gray-400 text-sm">Don't have an account? <a href="register.html"
+                            class="text-teal-400 hover:text-teal-300 hover:underline font-medium">Sign up</a></p>
+                </div>
+
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2 text-gray-300">Email Address</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-envelope absolute left-4 top-3.5 text-gray-500"></i>
+                            <input type="email" class="form-input pl-11" placeholder="name@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="block text-sm font-medium text-gray-300">Password</label>
+                            <a href="#" class="text-xs text-teal-400 hover:text-teal-300 hover:underline">Forgot?</a>
+                        </div>
+                        <div class="relative">
+                            <i class="fa-solid fa-lock absolute left-4 top-3.5 text-gray-500"></i>
+                            <input type="password" class="form-input pl-11" placeholder="••••••••">
+                        </div>
+                    </div>
+
+                    <a href="dashboard-user.html"
+                        class="btn-primary w-full py-3.5 rounded-xl text-center shadow-lg hover:shadow-teal-500/20 block">
+                        Sign In
+                    </a>
+
+                    <div class="relative my-8">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-white/10"></div>
+                        </div>
+                        <div class="relative flex justify-center text-xs uppercase tracking-widest"><span
+                                class="bg-gray-900 px-4 text-gray-500">Or continue with</span></div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <button type="button"
+                            class="flex items-center justify-center gap-2 px-4 py-2.5 border border-white/10 rounded-xl hover:bg-white/5 transition-colors text-white text-sm font-medium group">
+                            <i class="fa-brands fa-google text-red-500 group-hover:scale-110 transition-transform"></i>
+                            Google
+                        </button>
+                        <button type="button"
+                            class="flex items-center justify-center gap-2 px-4 py-2.5 border border-white/10 rounded-xl hover:bg-white/5 transition-colors text-white text-sm font-medium group">
+                            <i class="fa-brands fa-apple text-white group-hover:scale-110 transition-transform"></i>
+                            Apple
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

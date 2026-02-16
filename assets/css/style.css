@@ -1,0 +1,576 @@
+/* 
+* Online Art Therapy & Wellness Studio - Creative Theme
+* Palette: Teal (Healing), Coral (Energy), Gold (Optimism)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+    /* Color System: Premium Ethereal Wellness */
+    /* Updated to match current teal-red theme */
+    --primary-color: #14b8a6;
+    /* teal-500 - Primary brand color */
+    --primary-hover: #0d9488;
+    /* teal-600 - Hover state */
+    --secondary-color: #ef4444;
+    /* red-500 - Accent color */
+    --secondary-hover: #dc2626;
+    /* red-600 - Hover state */
+    --accent-color: #06b6d4;
+    /* cyan-500 - Tertiary accent */
+    --accent-hover: #0891b2;
+    /* cyan-600 - Hover state */
+
+    /* Background Colors */
+    --bg-dark: #111827;
+    /* gray-900 - Main dark background */
+    --bg-glass: rgba(255, 255, 255, 0.05);
+    /* Glass cards */
+    --bg-glass-hover: rgba(255, 255, 255, 0.1);
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    /* White - Primary text */
+    --text-secondary: #9ca3af;
+    /* gray-400 - Secondary text */
+    --text-muted: #6b7280;
+    /* gray-500 - Muted text */
+
+    /* Border Colors */
+    --border-light: rgba(255, 255, 255, 0.1);
+    --border-accent: rgba(20, 184, 166, 0.3);
+    /* teal with opacity */
+
+    /* Shadow Colors */
+    --shadow-teal: rgba(20, 184, 166, 0.2);
+    --shadow-teal-strong: rgba(20, 184, 166, 0.5);
+
+    /* Design Tokens */
+    --radius-sm: 0.5rem;
+    /* 8px */
+    --radius-md: 0.75rem;
+    /* 12px */
+    --radius-lg: 1rem;
+    /* 16px */
+    --radius-xl: 1.5rem;
+    /* 24px */
+
+    --spacing-xs: 0.5rem;
+    /* 8px */
+    --spacing-sm: 0.75rem;
+    /* 12px */
+    --spacing-md: 1rem;
+    /* 16px */
+    --spacing-lg: 1.5rem;
+    /* 24px */
+    --spacing-xl: 2rem;
+    /* 32px */
+}
+
+/* Base Styles */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-body);
+
+    /* premium Mesh Gradient */
+    background:
+        radial-gradient(at 0% 0%, hsla(173, 58%, 39%, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(12, 76%, 61%, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, hsla(173, 58%, 39%, 0.1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(12, 76%, 61%, 0.1) 0px, transparent 50%);
+    background-attachment: fixed;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Dark Mode Overrides */
+.dark body {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    /* Deep Jungle Aurora */
+    background:
+        radial-gradient(at 0% 0%, hsla(173, 80%, 20%, 0.4) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(280, 50%, 20%, 0.4) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, hsla(173, 80%, 20%, 0.4) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(280, 50%, 20%, 0.4) 0px, transparent 50%),
+        #0f172a;
+    background-attachment: fixed;
+}
+
+/* Utility Classes for Removing Inline Styles */
+.bg-hero-texture {
+    background-image: url('../assets/images/hero-texture.png');
+    background-size: cover;
+}
+
+.text-shadow-sm {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow-lg {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Animation Delays */
+.animate-delay-100 {
+    animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+    animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+    animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+    animation-delay: 0.4s;
+}
+
+.animate-delay-500 {
+    animation-delay: 0.5s;
+}
+
+.animate-delay-600 {
+    animation-delay: 0.6s;
+}
+
+.animate-delay-1000 {
+    animation-delay: 1s;
+}
+
+.animate-delay-1500 {
+    animation-delay: 1.5s;
+}
+
+.animate-delay-2000 {
+    animation-delay: 2s;
+}
+
+/* Animation Durations */
+.animate-duration-3000 {
+    animation-duration: 3s;
+}
+
+.animate-duration-4000 {
+    animation-duration: 4s;
+}
+
+.animate-duration-5000 {
+    animation-duration: 5s;
+}
+
+.animate-duration-6000 {
+    animation-duration: 6s;
+}
+
+/* Existing Animations from previous styles */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.bg-hero-mesh {
+    background:
+        radial-gradient(at 20% 30%, hsla(173, 79%, 21%, 0.3) 0px, transparent 50%),
+        radial-gradient(at 80% 70%, hsla(158, 64%, 59%, 0.3) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, hsla(180, 100%, 50%, 0.2) 0px, transparent 50%);
+}
+
+.bg-service-blur {
+    background:
+        radial-gradient(ellipse 800px 600px at 20% 30%, rgba(20, 184, 166, 0.3), transparent),
+        radial-gradient(ellipse 600px 800px at 80% 70%, rgba(16, 185, 129, 0.25), transparent),
+        radial-gradient(ellipse 700px 500px at 50% 50%, rgba(6, 182, 212, 0.15), transparent);
+    filter: blur(60px);
+}
+
+.bg-noise-texture {
+    background-image: url('data:image/svg+xml,%3Csvg width="100" height="100" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" /%3E%3C/filter%3E%3Crect width="100" height="100" filter="url(%23noise)" opacity="0.3"/%3E%3C/svg%3E');
+    background-size: 100px 100px;
+}
+
+.bg-gradient-contact {
+    background:
+        radial-gradient(at 10% 20%, hsla(173, 79%, 21%, 0.2) 0px, transparent 50%),
+        radial-gradient(at 90% 80%, hsla(320, 60%, 50%, 0.1) 0px, transparent 50%);
+}
+
+.bg-gradient-booking {
+    background:
+        radial-gradient(at 20% 30%, hsla(173, 79%, 21%, 0.2) 0px, transparent 50%),
+        radial-gradient(at 80% 80%, hsla(280, 60%, 50%, 0.1) 0px, transparent 50%);
+}
+
+.bg-gradient-confirmation {
+    background:
+        radial-gradient(at 50% 50%, hsla(173, 79%, 21%, 0.4) 0px, transparent 50%),
+        radial-gradient(at 80% 20%, hsla(158, 64%, 59%, 0.3) 0px, transparent 50%);
+}
+
+.bg-gradient-about-hero {
+    background:
+        radial-gradient(at 20% 30%, hsla(173, 79%, 21%, 0.4) 0px, transparent 60%),
+        radial-gradient(at 80% 70%, hsla(158, 64%, 59%, 0.15) 0px, transparent 60%);
+}
+
+.bg-gradient-about-mission {
+    background:
+        radial-gradient(at 30% 20%, hsla(173, 79%, 21%, 0.35) 0px, transparent 50%),
+        radial-gradient(at 70% 80%, hsla(158, 64%, 59%, 0.2) 0px, transparent 50%);
+}
+
+.bg-gradient-about-team {
+    background:
+        radial-gradient(at 20% 40%, hsla(280, 79%, 21%, 0.25) 0px, transparent 50%),
+        radial-gradient(at 80% 60%, hsla(173, 64%, 59%, 0.2) 0px, transparent 50%);
+}
+
+/* Floating Animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+    animation: float 10s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+/* ================================================
+   Button Components - Standardized Design System
+   ================================================ */
+
+.btn {
+    /* Base button styles */
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    /* py-3.5 px-8 */
+    font-size: 0.875rem;
+    /* text-sm */
+    font-weight: 700;
+    /* font-bold */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    /* tracking-wider */
+    border-radius: 9999px;
+    /* rounded-full */
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.btn-primary {
+    /* Teal background - Main CTA */
+    background-color: #14b8a6;
+    /* teal-500 */
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(20, 184, 166, 0.2), 0 4px 6px -2px rgba(20, 184, 166, 0.05);
+}
+
+.btn-primary:hover {
+    background-color: #0d9488;
+    /* teal-600 */
+    box-shadow: 0 20px 25px -5px rgba(20, 184, 166, 0.3), 0 10px 10px -5px rgba(20, 184, 166, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    /* White background - Secondary CTA */
+    background-color: white;
+    color: #0d9488;
+    /* teal-600 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+    background-color: #f0fdfa;
+    /* teal-50 */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    /* Bordered button */
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-lg {
+    /* Large button variant */
+    padding: 1rem 3rem;
+    /* py-4 px-12 */
+}
+
+.btn-full {
+    /* Full width button */
+    width: 100%;
+    display: block;
+}
+
+/* =========================================
+   Refactored Component Classes
+   ========================================= */
+
+/* --- Containers & Sections --- */
+.section-container {
+    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    overflow: hidden;
+    background-color: var(--bg-dark, #111827);
+    /* Fallback to gray-900 */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+/* --- Cards & Panels --- */
+.glass-panel {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    transition: all 0.5s ease;
+}
+
+.glass-panel:hover {
+    border-color: rgba(20, 184, 166, 0.3);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 25px 50px -12px rgba(20, 184, 166, 0.2);
+}
+
+/* --- Typography & Badges --- */
+.heading-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .heading-display {
+        font-size: 3.75rem;
+    }
+}
+
+.text-body-muted {
+    color: #9ca3af;
+    /* gray-400 */
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.625;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-width: 1px;
+    transition: all 0.3s ease;
+}
+
+.badge-teal {
+    background-color: rgba(20, 184, 166, 0.1);
+    color: #2dd4bf;
+    /* teal-400 */
+    border-color: rgba(20, 184, 166, 0.2);
+}
+
+.badge-glass {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #2dd4bf;
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Forms --- */
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(17, 24, 39, 0.5);
+    /* gray-900/50 */
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #14b8a6;
+    /* teal-500 */
+}
+
+.form-label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: white;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- Buttons Component System --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+    /* teal-500 to teal-600 */
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(20, 184, 166, 0.4);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2dd4bf, #14b8a6);
+    /* teal-400 to teal-500 */
+    box-shadow: 0 10px 15px -3px rgba(20, 184, 166, 0.5), 0 0 0 2px rgba(20, 184, 166, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #111827;
+    /* gray-900 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: #f0fdfa;
+    /* teal-50 */
+    color: #0f766e;
+    /* teal-700 */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}
+
+.btn-lg {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* --- Filter Buttons --- */
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: transparent;
+    color: white;
+    /* Explicit white for dark mode */
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-btn.active {
+    background-color: #14b8a6;
+    /* teal-500 */
+    border-color: #14b8a6;
+    color: white;
+}

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ArtSoul Wellness Studio</title>
+    <meta name="description"
+        content="Meet our team of certified art therapists and learn about our mission to bring healing through creativity.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="font-sans bg-ethereal-dark text-white selection:bg-teal-500 selection:text-white">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+
+    <!-- Header (Same as Index) -->
+    <header class="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-3xl font-display font-bold text-white">
+                    ArtSoul
+                </a>
+                <nav class="hidden md:flex items-center gap-12 text-sm font-medium uppercase tracking-wider">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="about.html" class="text-white border-b-2 border-teal-500 pb-1">About</a>
+                    <a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                    <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <a href="login.html"
+                        class="px-6 py-3 text-sm font-bold uppercase tracking-wider text-white border border-white/30 hover:bg-white/10 transition-colors mr-3">
+                        Login
+                    </a>
+                    <a href="booking.html"
+                        class="bg-white text-teal-900 px-8 py-3 text-sm font-bold uppercase tracking-wider hover:bg-teal-50 transition-colors">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-white text-2xl p-2" aria-label="Open menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 z-[100] bg-gray-900/95 backdrop-blur-xl animate-fade-in transition-colors duration-300">
+
+        <!-- Close Button -->
+        <button id="close-menu-btn"
+            class="absolute top-6 right-6 text-white text-3xl p-2 hover:rotate-90 transition-transform duration-300 z-[110]"
+            aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Menu Content Container -->
+        <div class="h-full w-full flex flex-col items-center justify-start pt-24 pb-8 px-6 overflow-y-auto">
+            <nav class="flex flex-col items-center gap-5 text-lg font-medium uppercase tracking-wider">
+                <a href="index.html" class="text-white hover:text-teal-400 transition-colors">Home</a>
+                <a href="about.html" class="text-teal-400 font-bold">About</a>
+                <a href="services.html" class="text-white hover:text-teal-400 transition-colors">Services</a>
+                <a href="gallery.html" class="text-white hover:text-teal-400 transition-colors">Gallery</a>
+                <a href="contact.html" class="text-white hover:text-teal-400 transition-colors">Contact</a>
+            </nav>
+            <div class="flex flex-col gap-3 mt-6 w-64">
+                <a href="login.html" class="btn btn-outline btn-full">
+                    Login
+                </a>
+                <a href="booking.html" class="btn btn-primary btn-full">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="section-container pt-32 pb-24" id="main-content">
+        <!-- Ethereal Background Layers -->
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-900/40 via-gray-900 to-emerald-900/40 z-0"></div>
+
+        <!-- Texture Overlay -->
+        <div class="absolute inset-0 opacity-20 mix-blend-overlay z-0 bg-hero-texture">
+        </div>
+
+        <!-- Animated Gradients -->
+        <div class="absolute inset-0 pointer-events-none bg-gradient-about-hero"></div>
+
+        <!-- Floating Decorative Orbs -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div class="absolute top-20 right-20 w-64 h-64 bg-teal-500/10 rounded-full blur-[80px] animate-pulse"></div>
+            <div
+                class="absolute bottom-10 left-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-[60px] animate-slide-slow">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <!-- Badge -->
+            <div class="mb-8 fade-in-up">
+                <span class="badge badge-glass shadow-xl shadow-teal-900/20">
+                    <i class="fa-solid fa-users text-teal-400"></i>
+                    Who We Are
+                </span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1
+                class="heading-display lg:text-7xl font-medium mb-8 leading-tight fade-in-up text-white animate-delay-100">
+                Healing Through <br class="hidden md:block" />
+                <span
+                    class="bg-gradient-to-r from-teal-200 via-white to-emerald-200 bg-clip-text text-transparent italic font-serif">Creative
+                    Expression</span>
+            </h1>
+
+            <!-- Divider -->
+            <div
+                class="w-24 h-px bg-gradient-to-r from-transparent via-teal-500/50 to-transparent mx-auto mb-8 fade-in-up animate-delay-200">
+            </div>
+
+            <!-- Subtitle -->
+            <p class="text-body-muted text-gray-300 max-w-2xl mx-auto fade-in-up animate-delay-300">
+                A collective of certified art therapists and wellness experts dedicated to guiding you on your journey
+                of self-discovery from the comfort of your home.
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section-container">
+        <!-- Background Texture -->
+        <div class="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none bg-hero-texture"></div>
+
+        <!-- Animated Gradient Overlays -->
+        <div class="absolute inset-0 pointer-events-none bg-gradient-about-mission"></div>
+
+        <!-- Floating Orbs -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-teal-500/10 rounded-full blur-[100px] animate-pulse">
+            </div>
+            <div
+                class="absolute bottom-20 right-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-[100px] animate-pulse animate-delay-1500">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
+            <!-- Image Side -->
+            <div class="fade-in-up relative group">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-emerald-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500">
+                </div>
+                <img src="assets/images/mission_hero.png" alt="Art Therapy Studio"
+                    class="relative rounded-2xl shadow-2xl border border-white/10 group-hover:scale-[1.02] transition-transform duration-500">
+            </div>
+
+            <!-- Content Side -->
+            <div class="fade-in-up animate-delay-200">
+                <!-- Badge -->
+                <span class="badge badge-glass mb-6">
+                    <i class="fas fa-heart text-teal-400"></i>
+                    Our Mission
+                </span>
+
+                <h2 class="heading-display mt-4 mb-6 leading-tight">
+                    Healing is an
+                    <span
+                        class="bg-gradient-to-r from-teal-200 via-white to-emerald-200 bg-clip-text text-transparent italic">Art</span>,
+                    <br />Not a Science
+                </h2>
+
+                <!-- Description -->
+                <p class="text-body-muted text-gray-300 mb-10">
+                    At ArtSoul, we believe that everyone has an inner artist waiting to be discovered. Art therapy isn't
+                    about creating a masterpiece; it's about the journey of self-discovery and expression.
+                </p>
+
+                <!-- Stat Cards -->
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="glass-panel glass-panel-hover p-6 rounded-2xl">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center group-hover:bg-teal-500/20 transition-colors">
+                                <i class="fas fa-palette text-teal-400 text-xl"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-4xl font-bold text-white mb-2 group-hover:text-teal-300 transition-colors">500+
+                        </h4>
+                        <p class="text-sm text-gray-400 font-medium uppercase tracking-wide">Workshops Hosted</p>
+                    </div>
+
+                    <div
+                        class="glass-panel glass-panel-hover bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-emerald-500/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors">
+                                <i class="fas fa-paint-brush text-emerald-400 text-xl"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-4xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
+                            10k+</h4>
+                        <p class="text-sm text-gray-400 font-medium uppercase tracking-wide">Artworks Created</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-container">
+        <!-- Background Texture -->
+        <div class="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none bg-hero-texture"></div>
+
+        <!-- Animated Gradient Overlays -->
+        <div class="absolute inset-0 pointer-events-none bg-gradient-about-team"></div>
+
+        <!-- Floating Orbs -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] animate-pulse">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-96 h-96 bg-teal-500/10 rounded-full blur-[120px] animate-pulse animate-delay-2000">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6">
+            <!-- Header -->
+            <div class="section-header fade-in-up">
+                <!-- Badge -->
+                <span class="badge badge-glass border-white/10 text-purple-300 mb-6">
+                    <i class="fas fa-users text-purple-400"></i>
+                    Our Experts
+                </span>
+
+                <h2 class="heading-display mb-6">
+                    Meet Our
+                    <span
+                        class="bg-gradient-to-r from-purple-200 via-white to-teal-200 bg-clip-text text-transparent italic">Therapists</span>
+                </h2>
+
+                <p class="text-body-muted text-gray-300 max-w-2xl mx-auto">
+                    Compassionate professionals guiding your creative journey toward healing and self-discovery.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="group relative fade-in-up">
+                    <div class="glass-panel glass-panel-hover overflow-hidden hover:border-purple-500/30">
+                        <!-- Image Container -->
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="assets/images/team-sarah.png" alt="Dr. Sarah Jenkin - Clinical Art Therapist"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent opacity-80">
+                            </div>
+
+                            <!-- Hover Bio -->
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <p class="text-sm text-gray-300 leading-relaxed">
+                                    10+ years specializing in trauma-informed creative therapy.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Info -->
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-purple-300 transition-colors">
+                                Dr. Sarah Jenkin</h3>
+                            <p class="text-purple-400 text-sm font-medium mb-4">Clinical Art Therapist</p>
+
+                            <!-- Social Links -->
+                            <div class="flex justify-center gap-3">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-white/5 hover:bg-purple-500/20 flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all border border-white/10 hover:border-purple-500/30">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-white/5 hover:bg-purple-500/20 flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all border border-white/10 hover:border-purple-500/30">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="group relative fade-in-up animate-delay-100">
+                    <div class="glass-panel glass-panel-hover overflow-hidden hover:border-teal-500/30">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="assets/images/team-michael.png" alt="Michael Ross - Mindfulness Coach"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent opacity-80">
+                            </div>
+
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <p class="text-sm text-gray-300 leading-relaxed">
+                                    Certified in somatic meditation and breathwork techniques.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-teal-300 transition-colors">
+                                Michael Ross</h3>
+                            <p class="text-teal-400 text-sm font-medium mb-4">Mindfulness Coach</p>
+
+                            <div class="flex justify-center gap-3">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-white/5 hover:bg-teal-500/20 flex items-center justify-center text-gray-400 hover:text-teal-400 transition-all border border-white/10 hover:border-teal-500/30">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-white/5 hover:bg-teal-500/20 flex items-center justify-center text-gray-400 hover:text-teal-400 transition-all border border-white/10 hover:border-teal-500/30">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="group relative fade-in-up animate-delay-200">
+                    <div class="glass-panel glass-panel-hover overflow-hidden hover:border-emerald-500/30">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="assets/images/team-elena.png"
+                                alt="Elena Rodriguez - Expressive Arts Facilitator"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent opacity-80">
+                            </div>
+
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <p class="text-sm text-gray-300 leading-relaxed">
+                                    Specializes in multi-modal expressive arts for emotional processing.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-6 text-center">
+                            <h3
+                                class="text-xl font-bold text-white mb-1 group-hover:text-emerald-300 transition-colors">
+                                Elena Rodriguez</h3>
+                            <p class="text-emerald-400 text-sm font-medium mb-4">Expressive Arts Facilitator</p>
+
+                            <div class="flex justify-center gap-3">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-white/5 hover:bg-emerald-500/20 flex items-center justify-center text-gray-400 hover:text-emerald-400 transition-all border border-white/10 hover:border-emerald-500/30">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-white/5 hover:bg-emerald-500/20 flex items-center justify-center text-gray-400 hover:text-emerald-400 transition-all border border-white/10 hover:border-emerald-500/30">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="group relative fade-in-up animate-delay-300">
+                    <div class="glass-panel glass-panel-hover overflow-hidden hover:border-cyan-500/30">
+                        <div class="relative h-72 overflow-hidden">
+                            <img src="assets/images/team-david.png" alt="David Chen - Music & Art Therapist"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent opacity-80">
+                            </div>
+
+                            <div
+                                class="absolute inset-x-0 bottom-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <p class="text-sm text-gray-300 leading-relaxed">
+                                    Integrates sound healing with visual art for holistic therapy.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-white mb-1 group-hover:text-cyan-300 transition-colors">
+                                David Chen</h3>
+                            <p class="text-cyan-400 text-sm font-medium mb-4">Music & Art Therapist</p>
+
+                            <div class="flex justify-center gap-3">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-white/5 hover:bg-cyan-500/20 flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all border border-white/10 hover:border-cyan-500/30">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-xl bg-white/5 hover:bg-cyan-500/20 flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all border border-white/10 hover:border-cyan-500/30">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer - Ethereal Dark -->
+    <footer class="bg-ethereal-dark py-16 border-t border-white/10 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="text-3xl font-display font-bold mb-6 text-white">ArtSoul</div>
+                    <p class="text-gray-400 mb-6 font-light">
+                        Contemporary art therapy & wellness studio.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="hover:text-teal-400 transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Services</a></li>
+                        <li><a href="gallery.html" class="hover:text-teal-400 transition-colors">Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-teal-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Individual Therapy</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Group Workshops</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Mindful Art</a></li>
+                        <li><a href="booking.html" class="hover:text-teal-400 transition-colors">Book Session</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Contact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-teal-500"></i>
+                            <span>hello@artsoul.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone mt-1 text-teal-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2025 ArtSoul. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Terms</a>
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

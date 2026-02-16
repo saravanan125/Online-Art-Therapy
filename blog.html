@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Blog - ArtSoul</title>
+    <meta name="description"
+        content="Read expert insights on art therapy, mental wellness, and creative healing. Tips and stories from certified therapists.">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 text-slate-800 dark:bg-slate-900 dark:text-slate-200 transition-colors duration-300">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+
+    <header
+        class="fixed w-full top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md transition-all duration-300">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-3xl font-display font-bold text-white">
+                    ArtSoul
+                </a>
+                <nav class="hidden md:flex items-center gap-12 text-sm font-medium uppercase tracking-wider">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                    <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <a href="login.html"
+                        class="px-6 py-3 text-sm font-bold uppercase tracking-wider text-white border border-white/30 hover:bg-white/10 transition-colors mr-3">
+                        Login
+                    </a>
+                    <a href="booking.html"
+                        class="bg-white text-teal-900 px-8 py-3 text-sm font-bold uppercase tracking-wider hover:bg-teal-50 transition-colors">
+                        Book Now
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-slate-800 absolute w-full">
+            <div class="flex flex-col p-6 space-y-4 font-medium">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Workshops</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="blog.html" class="text-primary">Blog</a>
+                <a href="contact.html">Contact</a>
+                <div class="border-t border-gray-100 dark:border-slate-800 pt-4 flex flex-col gap-3">
+                    <a href="login.html" class="text-center">Login</a>
+                    <a href="register.html" class="bg-primary text-white text-center py-2 rounded-lg">Join Studio</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-container pt-32 pb-12" id="main-content">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="heading-display text-5xl md:text-6xl lg:text-7xl mb-6 fade-in-up">Wellness Journal</h1>
+            <p
+                class="text-body-muted text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8 fade-in-up animate-delay-100">
+                Read about the latest in art therapy research, mental health tips, and community stories.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-container bg-ethereal-dark">
+        <!-- Background Texture -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div class="absolute inset-0 opacity-20 mix-blend-overlay bg-hero-texture"></div>
+            <!-- Background Decor -->
+            <div
+                class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-900 to-transparent">
+            </div>
+            <div class="absolute top-20 right-10 w-64 h-64 bg-teal-500/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-10 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 relative z-10">
+            <!-- Blog Posts (2 Cores) -->
+            <div class="md:col-span-2 space-y-12">
+                <!-- Post 1 -->
+                <article
+                    class="glass-panel glass-panel-hover p-6 flex flex-col md:flex-row gap-8 items-start fade-in-up">
+                    <img src="assets/images/service-art-v2.png" alt="Blog 1"
+                        class="w-full md:w-64 h-48 object-cover rounded-xl">
+                    <div>
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span class="text-primary font-bold">Therapy</span>
+                            <span>•</span>
+                            <span>Oct 12, 2025</span>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-3 hover:text-primary transition-colors"><a
+                                href="blog-details.html">Why You Don't Need to Be an "Artist" for Art Therapy</a></h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                            One of the biggest misconceptions about art therapy is that you need artistic talent. In
+                            this post, we explore why the process matters more than the result.
+                        </p>
+                        <a href="blog-details.html"
+                            class="text-primary font-semibold hover:gap-2 transition-all inline-flex items-center">Read
+                            Article <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article
+                    class="glass-panel glass-panel-hover p-6 flex flex-col md:flex-row gap-8 items-start fade-in-up">
+                    <img src="assets/images/service-mindfulness.png" alt="Blog 2"
+                        class="w-full md:w-64 h-48 object-cover rounded-xl">
+                    <div>
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span class="text-secondary font-bold">Mindfulness</span>
+                            <span>•</span>
+                            <span>Sep 28, 2025</span>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-3 hover:text-primary transition-colors"><a
+                                href="blog-details.html">5 Daily Sketching Exercises for Anxiety Relief</a></h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                            Simple, quick sketching techniques you can do in 5 minutes to ground yourself during a panic
+                            attack or stressful day.
+                        </p>
+                        <a href="blog-details.html"
+                            class="text-primary font-semibold hover:gap-2 transition-all inline-flex items-center">Read
+                            Article <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </article>
+                <!-- Post 3 -->
+                <article
+                    class="glass-panel glass-panel-hover p-6 flex flex-col md:flex-row gap-8 items-start fade-in-up">
+                    <img src="assets/images/service-counseling.png" alt="Blog 3"
+                        class="w-full md:w-64 h-48 object-cover rounded-xl">
+                    <div>
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                            <span class="text-accent font-bold">Research</span>
+                            <span>•</span>
+                            <span>Sep 15, 2025</span>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-3 hover:text-primary transition-colors"><a
+                                href="blog-details.html">The Neuroscience of Creativity and Healing</a></h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                            New studies show how creative expression activates different parts of the brain to process
+                            trauma and improve cognitive function.
+                        </p>
+                        <a href="blog-details.html"
+                            class="text-primary font-semibold hover:gap-2 transition-all inline-flex items-center">Read
+                            Article <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="glass-panel p-8 rounded-2xl h-fit">
+                <div class="mb-8">
+                    <h3 class="font-bold text-lg mb-4">Search</h3>
+                    <div class="relative">
+                        <input type="text" placeholder="Search articles..." class="form-input">
+                        <button class="absolute right-3 top-3 text-gray-400 hover:text-primary"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="font-bold text-lg mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary flex justify-between"><span>Art
+                                    Therapy</span> <span
+                                    class="bg-gray-200 dark:bg-slate-700 px-2 py-0.5 rounded-full text-xs">12</span></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary flex justify-between"><span>Mindfulness</span>
+                                <span
+                                    class="bg-gray-200 dark:bg-slate-700 px-2 py-0.5 rounded-full text-xs">8</span></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary flex justify-between"><span>Community
+                                    Stories</span> <span
+                                    class="bg-gray-200 dark:bg-slate-700 px-2 py-0.5 rounded-full text-xs">5</span></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-600 dark:text-gray-400 hover:text-primary flex justify-between"><span>Updates</span>
+                                <span
+                                    class="bg-gray-200 dark:bg-slate-700 px-2 py-0.5 rounded-full text-xs">3</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Join Newsletter</h3>
+                    <p class="text-sm text-gray-500 mb-4">Get the latest articles sent to your inbox.</p>
+                    <input type="email" placeholder="Email address" class="form-input mb-3">
+                    <button
+                        class="w-full bg-primary text-white font-bold py-2 rounded-lg hover:bg-violet-700 transition-colors">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div
+                class="border-t border-gray-200 dark:border-slate-800 pt-8 text-center text-gray-500 dark:text-gray-500 text-sm">
+                <p>&copy; 2025 ArtSoul Wellness Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

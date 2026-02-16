@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ArtSoul</title>
+    <meta name="description"
+        content="Get in touch with our team. Book a free consultation or ask us anything about our art therapy services.">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-900 text-white selection:bg-teal-500 selection:text-white">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation - Minimal (Matching Home) -->
+    <header class="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-3xl font-display font-bold text-white">
+                    ArtSoul
+                </a>
+                <nav class="hidden md:flex items-center gap-12 text-sm font-medium uppercase tracking-wider">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                    <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-white border-b-2 border-teal-500 pb-1">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <a href="login.html"
+                        class="px-6 py-3 text-sm font-bold uppercase tracking-wider text-white border border-white/30 hover:bg-white/10 transition-colors mr-3">
+                        Login
+                    </a>
+                    <a href="booking.html"
+                        class="bg-white text-teal-900 px-8 py-3 text-sm font-bold uppercase tracking-wider hover:bg-teal-50 transition-colors">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-white text-2xl p-2" aria-label="Open menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 z-[100] bg-gray-900/95 backdrop-blur-xl animate-fade-in transition-colors duration-300">
+
+        <button id="close-menu-btn"
+            class="absolute top-6 right-6 text-white text-3xl p-2 hover:rotate-90 transition-transform duration-300 z-[110]"
+            aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="h-full w-full flex flex-col items-center justify-start pt-24 pb-8 px-6 overflow-y-auto">
+            <nav class="flex flex-col items-center gap-5 text-lg font-medium uppercase tracking-wider">
+                <a href="index.html" class="text-white hover:text-teal-400 transition-colors">Home</a>
+                <a href="about.html" class="text-white hover:text-teal-400 transition-colors">About</a>
+                <a href="services.html" class="text-white hover:text-teal-400 transition-colors">Services</a>
+                <a href="gallery.html" class="text-white hover:text-teal-400 transition-colors">Gallery</a>
+                <a href="contact.html" class="text-teal-400 font-bold">Contact</a>
+            </nav>
+            <div class="flex flex-col gap-3 mt-6 w-64">
+                <a href="login.html" class="btn btn-outline btn-full">
+                    Login
+                </a>
+                <a href="booking.html" class="btn btn-primary btn-full">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header - Ethereal -->
+    <section class="section-container pt-40 pb-20">
+        <!-- Background Gradients -->
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-gray-900 to-emerald-900/20"></div>
+        <div class="absolute inset-0 bg-gradient-contact">
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <span class="badge badge-glass border-white/5 mb-6 fade-up">
+                <i class="fa-solid fa-envelope-open-text text-[10px]"></i> We're Here For You
+            </span>
+            <h1 class="heading-display mb-6 fade-up text-white">
+                Get in <span
+                    class="bg-gradient-to-r from-teal-200 to-red-200 bg-clip-text text-transparent italic">Touch</span>
+            </h1>
+            <p class="text-body-muted text-gray-300 max-w-2xl mx-auto fade-up animate-delay-100">
+                Have questions about our online workshops or want to collaborate? Reach out to our virtual support team.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-container bg-ethereal-dark">
+        <!-- Background Texture -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div class="absolute inset-0 opacity-20 mix-blend-overlay bg-hero-texture"></div>
+            <!-- Background Decor -->
+            <div class="absolute top-20 left-10 w-64 h-64 bg-teal-500/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 relative z-10">
+
+            <!-- Contact Info - Ethereal -->
+            <div class="fade-up space-y-8">
+                <div class="glass-panel glass-panel-hover p-8 hover:border-teal-500/30 group">
+                    <div class="flex items-start gap-6">
+                        <div
+                            class="w-14 h-14 bg-teal-500/10 rounded-2xl flex items-center justify-center text-teal-400 text-2xl flex-shrink-0 border border-teal-500/20 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-medium text-xl text-white mb-2">Virtual Headquarters</h3>
+                            <p class="text-body-muted text-sm">
+                                Our services are 100% online, accessible worldwide.<br>
+                                Based in Creative District, NY (Admin Only)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel glass-panel-hover p-8 hover:border-emerald-500/30 group">
+                    <div class="flex items-start gap-6">
+                        <div
+                            class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-400 text-2xl flex-shrink-0 border border-emerald-500/20 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-medium text-xl text-white mb-2">Email Support</h3>
+                            <p class="text-body-muted text-sm">
+                                <a href="mailto:hello@artsoul.com"
+                                    class="hover:text-emerald-400 transition-colors">hello@artsoul.com</a><br>
+                                <a href="mailto:support@artsoul.com"
+                                    class="hover:text-emerald-400 transition-colors">support@artsoul.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel glass-panel-hover p-8 hover:border-cyan-500/30 group">
+                    <div class="flex items-start gap-6">
+                        <div
+                            class="w-14 h-14 bg-cyan-500/10 rounded-2xl flex items-center justify-center text-cyan-400 text-2xl flex-shrink-0 border border-cyan-500/20 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-medium text-xl text-white mb-2">Call Us</h3>
+                            <p class="text-body-muted text-sm">
+                                +1 (555) 123-4567<br>
+                                Mon-Fri, 9am - 6pm EST
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-panel p-10 fade-up relative overflow-hidden animate-delay-200">
+                <div aria-hidden="true"
+                    class="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2 translate-x-1/2">
+                </div>
+
+                <h3 class="text-2xl font-display font-medium text-white mb-8">Send a Message</h3>
+                <form class="space-y-6 relative z-10">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="form-label text-gray-400">First
+                                Name</label>
+                            <input type="text" class="form-input placeholder-gray-600" placeholder="John">
+                        </div>
+                        <div>
+                            <label class="form-label text-gray-400">Last
+                                Name</label>
+                            <input type="text" class="form-input placeholder-gray-600" placeholder="Doe">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label text-gray-400">Email
+                            Address</label>
+                        <input type="email" class="form-input placeholder-gray-600" placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="form-label text-gray-400">Subject</label>
+                        <div class="relative">
+                            <select class="form-input appearance-none">
+                                <option>General Inquiry</option>
+                                <option>Book a Workshop</option>
+                                <option>Corporate Partnership</option>
+                            </select>
+                            <i
+                                class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="form-label text-gray-400">Message</label>
+                        <textarea rows="4" class="form-input placeholder-gray-600"
+                            placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-white text-teal-900 font-bold py-4 rounded-xl hover:bg-teal-50 transition-colors shadow-lg uppercase tracking-widest text-xs">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Ethereal Dark -->
+    <footer class="bg-gray-900 py-16 border-t border-white/10 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="text-3xl font-display font-bold mb-6 text-white">ArtSoul</div>
+                    <p class="text-gray-400 mb-6 font-light">
+                        Contemporary online art therapy & wellness studio.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="hover:text-teal-400 transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Services</a></li>
+                        <li><a href="gallery.html" class="hover:text-teal-400 transition-colors">Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-teal-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Virtual Therapy</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Online Workshops</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Digital
+                                Mindfulness</a></li>
+                        <li><a href="booking.html" class="hover:text-teal-400 transition-colors">Book Session</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Contact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-teal-500"></i>
+                            <span>hello@artsoul.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone mt-1 text-teal-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2025 ArtSoul. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Terms</a>
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

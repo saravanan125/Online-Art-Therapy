@@ -1,0 +1,265 @@
+/* ========================================
+   RTL (Right-to-Left) SUPPORT
+   ArtSoul - Online Art Therapy & Wellness
+   ======================================== */
+
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* 1. Layout & Flexbox */
+[dir="rtl"] .flex-row {
+    flex-direction: row-reverse;
+}
+
+/* 2. Text Alignment */
+[dir="rtl"] .text-left {
+    text-align: right;
+}
+
+[dir="rtl"] .text-right {
+    text-align: left;
+}
+
+/* 3. Spacing Flips (Margins) */
+[dir="rtl"] .ml-auto {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+[dir="rtl"] .mr-auto {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+[dir="rtl"] .ml-0 {
+    margin-right: 0;
+}
+
+[dir="rtl"] .mr-0 {
+    margin-left: 0;
+}
+
+[dir="rtl"] .ml-1 {
+    margin-right: 0.25rem;
+    margin-left: 0;
+}
+
+[dir="rtl"] .mr-1 {
+    margin-left: 0.25rem;
+    margin-right: 0;
+}
+
+[dir="rtl"] .ml-2 {
+    margin-right: 0.5rem;
+    margin-left: 0;
+}
+
+[dir="rtl"] .mr-2 {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+[dir="rtl"] .ml-3 {
+    margin-right: 0.75rem;
+    margin-left: 0;
+}
+
+[dir="rtl"] .mr-3 {
+    margin-left: 0.75rem;
+    margin-right: 0;
+}
+
+[dir="rtl"] .ml-4 {
+    margin-right: 1rem;
+    margin-left: 0;
+}
+
+[dir="rtl"] .mr-4 {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+[dir="rtl"] .ml-6 {
+    margin-right: 1.5rem;
+    margin-left: 0;
+}
+
+[dir="rtl"] .mr-6 {
+    margin-left: 1.5rem;
+    margin-right: 0;
+}
+
+[dir="rtl"] .ml-8 {
+    margin-right: 2rem;
+    margin-left: 0;
+}
+
+[dir="rtl"] .mr-8 {
+    margin-left: 2rem;
+    margin-right: 0;
+}
+
+/* 4. Spacing Flips (Padding) */
+[dir="rtl"] .pl-0 {
+    padding-right: 0;
+}
+
+[dir="rtl"] .pr-0 {
+    padding-left: 0;
+}
+
+[dir="rtl"] .pl-4 {
+    padding-right: 1rem;
+    padding-left: 0;
+}
+
+[dir="rtl"] .pr-4 {
+    padding-left: 1rem;
+    padding-right: 0;
+}
+
+[dir="rtl"] .pl-6 {
+    padding-right: 1.5rem;
+    padding-left: 0;
+}
+
+[dir="rtl"] .pr-6 {
+    padding-left: 1.5rem;
+    padding-right: 0;
+}
+
+[dir="rtl"] .pl-8 {
+    padding-right: 2rem;
+    padding-left: 0;
+}
+
+[dir="rtl"] .pr-8 {
+    padding-left: 2rem;
+    padding-right: 0;
+}
+
+/* 5. Positioning (Absolute/Fixed) */
+[dir="rtl"] .left-0 {
+    right: 0;
+    left: auto;
+}
+
+[dir="rtl"] .right-0 {
+    left: 0;
+    right: auto;
+}
+
+[dir="rtl"] .left-6 {
+    right: 1.5rem;
+    left: auto;
+}
+
+[dir="rtl"] .right-6 {
+    left: 1.5rem;
+    right: auto;
+}
+
+[dir="rtl"] .left-1\/2 {
+    right: 50%;
+    left: auto;
+    transform: translateX(50%);
+}
+
+/* Fix transform for centered elements */
+[dir="rtl"] .translate-x-1\/2 {
+    transform: translateX(-50%);
+}
+
+[dir="rtl"] .-translate-x-1\/2 {
+    transform: translateX(50%);
+}
+
+/* 6. Form Elements */
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+    text-align: right;
+}
+
+/* 7. Icons Mirroring */
+/* Flip directional icons */
+[dir="rtl"] .fa-arrow-right:before {
+    content: "\f060";
+}
+
+/* arrow-left */
+[dir="rtl"] .fa-arrow-left:before {
+    content: "\f061";
+}
+
+/* arrow-right */
+[dir="rtl"] .fa-chevron-right:before {
+    content: "\f053";
+}
+
+/* chevron-left */
+[dir="rtl"] .fa-chevron-left:before {
+    content: "\f054";
+}
+
+/* chevron-right */
+[dir="rtl"] .fa-angle-right:before {
+    content: "\f104";
+}
+
+/* angle-left */
+[dir="rtl"] .fa-angle-left:before {
+    content: "\f105";
+}
+
+/* angle-right */
+[dir="rtl"] .fa-arrow-right-long:before {
+    content: "\f177";
+}
+
+/* arrow-left-long */
+
+/* 8. Component Specific Fixes */
+/* Timeline/Process Lines */
+[dir="rtl"] .border-l {
+    border-right-width: 1px;
+    border-left-width: 0;
+}
+
+[dir="rtl"] .border-r {
+    border-left-width: 1px;
+    border-right-width: 0;
+}
+
+[dir="rtl"] .border-l-2 {
+    border-right-width: 2px;
+    border-left-width: 0;
+}
+
+/* Blockquotes */
+[dir="rtl"] blockquote {
+    border-right: 4px solid var(--primary-color);
+    border-left: none;
+}
+
+/* Lists */
+[dir="rtl"] ul.list-disc,
+[dir="rtl"] ol.list-decimal {
+    margin-right: 1.5rem;
+    margin-left: 0;
+}
+
+/* Close Buttons (Absolute Top Right -> Top Left) */
+[dir="rtl"] .absolute.top-4.right-4 {
+    left: 1rem;
+    right: auto;
+}
+
+/* Toggle Buttons Position */
+[dir="rtl"] #theme-toggle,
+[dir="rtl"] #rtl-toggle {
+    left: 1.5rem;
+    right: auto;
+}

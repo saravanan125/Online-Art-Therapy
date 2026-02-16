@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressive Painting - ArtSoul</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-ethereal-dark text-white selection:bg-teal-500 selection:text-white">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-3xl font-display font-bold text-white">
+                    ArtSoul
+                </a>
+                <nav class="hidden md:flex items-center gap-12 text-sm font-medium uppercase tracking-wider">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="services.html" class="text-white border-b-2 border-teal-500 pb-1">Services</a>
+                    <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <a href="booking.html"
+                        class="bg-white text-teal-900 px-8 py-3 text-sm font-bold uppercase tracking-wider hover:bg-teal-50 transition-colors">
+                        Book Now
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-white"><i
+                        class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-white/10 absolute w-full">
+            <div class="flex flex-col p-6 space-y-4 font-medium">
+                <a href="index.html" class="text-white hover:text-teal-400">Home</a>
+                <a href="about.html" class="text-white hover:text-teal-400">About Us</a>
+                <a href="services.html" class="text-white hover:text-teal-400">Services</a>
+                <a href="gallery.html" class="text-white hover:text-teal-400">Gallery</a>
+                <a href="blog.html" class="text-white hover:text-teal-400">Blog</a>
+                <a href="contact.html" class="text-white hover:text-teal-400">Contact</a>
+                <div class="border-t border-white/10 pt-4 flex flex-col gap-3">
+                    <a href="login.html" class="text-center text-white hover:text-teal-400">Login</a>
+                    <a href="register.html" class="bg-teal-500 text-white text-center py-2 rounded-lg">Join Studio</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-container pt-40 pb-20" id="main-content">
+        <!-- Background Texture -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-gray-900 to-emerald-900/20"></div>
+            <div class="absolute inset-0 opacity-20  bg-hero-texture"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-block px-4 py-1 badge badge-teal mb-4">One-on-One
+                    Session</div>
+                <h1 class="heading-display text-4xl md:text-5xl mb-6">Expressive Painting: Releasing Blocked
+                    Emotions</h1>
+                <div class="flex flex-wrap gap-6 text-gray-300">
+                    <div class="flex items-center gap-2"><i class="fa-regular fa-clock text-teal-400"></i> 60 Minutes
+                    </div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-video text-teal-400"></i> Live Video Call
+                    </div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-user-check text-teal-400"></i> Beginner
+                        Friendly</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-transparent">
+        <div class="container mx-auto px-6 grid lg:grid-cols-3 gap-12">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <div class="mb-12">
+                    <h2 class="heading-display text-2xl mb-6">About This Session</h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        This 60-minute session is fully guided by a certified art therapist. We focus on "Process over
+                        Product," meaning the goal is not to create a beautiful painting, but to use colors and
+                        brushstrokes to externalize feelings that are hard to put into words.
+                    </p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        You will be guided through a series of prompts designed to release tension, identify underlying
+                        stressors, and promote a sense of calm.
+                    </p>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="heading-display text-2xl mb-6">What You'll Learn</h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-teal-400 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Emotional Identification</h4>
+                                <p class="text-sm text-gray-400">Learn to associate colors with
+                                    specific emotional states.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-teal-400 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Stress Reduction Techniques</h4>
+                                <p class="text-sm text-gray-400">Breathing exercises integrated with
+                                    brush movement.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i class="fa-solid fa-check text-teal-400 mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Self-Validation</h4>
+                                <p class="text-sm text-gray-400">Building confidence in your own
+                                    narrative and expression.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- FAQs -->
+                <div class="mb-12">
+                    <div class="mb-12">
+                        <h2 class="heading-display text-2xl mb-6">Frequently Asked Questions</h2>
+                        <div class="space-y-4">
+                            <div class="glass-panel p-4">
+                                <h4 class="font-bold mb-2 text-white">Do I need to be good at art?</h4>
+                                <p class="text-sm text-gray-400">Not at all! This therapy is suitable for
+                                    absolute beginners. We focus on expression, not skill.</p>
+                            </div>
+                            <div class="glass-panel p-4">
+                                <h4 class="font-bold mb-2 text-white">What materials do I need?</h4>
+                                <p class="text-sm text-gray-400">Basic watercolors or acrylics, paper,
+                                    and a few brushes. A list will be emailed upon booking.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="glass-panel p-6 sticky top-28">
+                        <h3 class="text-2xl font-bold mb-6 text-white">$49.00 <span
+                                class="text-base font-normal text-gray-400">/
+                                session</span></h3>
+
+                        <div class="space-y-4 mb-8">
+                            <div>
+                                <label class="block text-sm font-bold mb-2 text-gray-300">Select Date</label>
+                                <input type="date" class="form-input">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2 text-gray-300">Select Time</label>
+                                <select class="form-input">
+                                    <option>10:00 AM - 11:00 AM</option>
+                                    <option>2:00 PM - 3:00 PM</option>
+                                    <option>5:00 PM - 6:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button class="btn-primary w-full py-3 rounded-lg mb-4">Book
+                            Appointment</button>
+                        <p class="text-xs text-center text-gray-500">Secure payment via Stripe. 24h cancellation policy.
+                        </p>
+
+                        <div class="mt-8 pt-8 border-t border-white/10">
+                            <div class="flex items-center gap-4">
+                                <img src="assets/images/team-sarah.png" alt="Therapist"
+                                    class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <p class="text-sm font-bold text-white">Dr. Sarah Jenkin</p>
+                                    <p class="text-xs text-teal-400">Lead Therapist</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-white/10 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 ArtSoul. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Workshops & Services - ArtSoul</title>
+    <meta name="description"
+        content="Explore our range of online art therapy workshops and personalized healing sessions. Guided by certified therapists.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="font-sans bg-ethereal-dark text-white selection:bg-teal-500 selection:text-white">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+
+    <!-- Navigation - Minimal (Matching Home) -->
+    <header class="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-3xl font-display font-bold text-white">
+                    ArtSoul
+                </a>
+                <nav class="hidden md:flex items-center gap-12 text-sm font-medium uppercase tracking-wider">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="services.html" class="text-white border-b-2 border-teal-500 pb-1">Services</a>
+                    <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <a href="login.html"
+                        class="px-6 py-3 text-sm font-bold uppercase tracking-wider text-white border border-white/30 hover:bg-white/10 transition-colors mr-3">
+                        Login
+                    </a>
+                    <a href="booking.html"
+                        class="bg-white text-teal-900 px-8 py-3 text-sm font-bold uppercase tracking-wider hover:bg-teal-50 transition-colors">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-white text-2xl p-2" aria-label="Open menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 z-[100] bg-gray-900/95 backdrop-blur-xl animate-fade-in transition-colors duration-300">
+
+        <button id="close-menu-btn"
+            class="absolute top-6 right-6 text-white text-3xl p-2 hover:rotate-90 transition-transform duration-300 z-[110]"
+            aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="h-full w-full flex flex-col items-center justify-start pt-24 pb-8 px-6 overflow-y-auto">
+            <nav class="flex flex-col items-center gap-5 text-lg font-medium uppercase tracking-wider">
+                <a href="index.html" class="text-white hover:text-teal-400 transition-colors">Home</a>
+                <a href="about.html" class="text-white hover:text-teal-400 transition-colors">About</a>
+                <a href="services.html" class="text-teal-400 font-bold">Services</a>
+                <a href="gallery.html" class="text-white hover:text-teal-400 transition-colors">Gallery</a>
+                <a href="contact.html" class="text-white hover:text-teal-400 transition-colors">Contact</a>
+            </nav>
+            <div class="flex flex-col gap-3 mt-6 w-64">
+                <a href="login.html" class="btn btn-outline btn-full">
+                    Login
+                </a>
+                <a href="booking.html" class="btn btn-primary btn-full">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Hero - Clean & Simple -->
+    <!-- Services Hero - Clean & Simple -->
+    <section class="section-container pt-40 pb-28" id="main-content">
+        <!-- Artistic Background Layer -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-gray-900 to-emerald-900/20"></div>
+
+            <!-- Watercolor Effect -->
+            <div class="absolute inset-0 opacity-30 bg-service-blur">
+            </div>
+
+            <!-- Subtle Texture Overlay -->
+            <div class="absolute inset-0 opacity-10 bg-noise-texture">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center space-y-8 fade-up">
+                <!-- Badge -->
+                <div class="badge badge-teal">
+                    <div class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-teal-300">Our Services</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="heading-display leading-tight text-white">
+                    Therapeutic
+                    <span
+                        class="block mt-3 bg-gradient-to-r from-teal-300 via-emerald-300 to-cyan-300 bg-clip-text text-transparent">
+                        Art & Wellness
+                    </span>
+                    Services
+                </h1>
+
+                <!-- Description -->
+                <p class="text-body-muted text-gray-300 max-w-2xl mx-auto">
+                    Explore our curated collection of online therapy sessions and wellness workshops designed for your
+                    personal growth and healing journey.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Grid - Glassmorphism -->
+    <section id="services-grid" class="section-container bg-ethereal-dark">
+        <!-- Background Texture -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div class="absolute inset-0 opacity-20 mix-blend-overlay bg-hero-texture"></div>
+            <!-- Background Elements -->
+            <div class="absolute top-0 right-0 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-panel glass-panel-hover overflow-hidden fade-up">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10 opacity-60">
+                        </div>
+                        <img src="assets/images/service-art-v2.png" alt="Abstract Art Therapy Session"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 relative z-20 -mt-10">
+                        <div
+                            class="inline-block bg-teal-900/80 backdrop-blur-sm border border-teal-500/30 px-4 py-1 rounded-full text-teal-300 text-xs font-bold uppercase tracking-wide mb-4">
+                            Individual</div>
+                        <h3 class="text-2xl font-display font-medium text-white mb-4">Virtual Expressive Painting</h3>
+                        <p class="text-gray-400 mb-6 font-light leading-relaxed">
+                            One-on-one session via secure video, focusing on releasing suppressed emotions through
+                            abstract painting.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm text-gray-400">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-teal-400"></i> Isolate
+                                & identify emotions</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-teal-400"></i> No
+                                experience needed</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-teal-400"></i> Digital
+                                art tools included</li>
+                        </ul>
+                        <div class="flex items-center justify-between pt-6 border-t border-white/10">
+                            <span class="text-2xl font-light text-white">$49 <span
+                                    class="text-sm font-normal text-gray-500">/session</span></span>
+                            <a href="service-details.html"
+                                class="bg-white text-teal-900 hover:bg-teal-50 px-6 py-2 rounded-full font-bold text-sm transition-colors uppercase tracking-wider">Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="glass-panel glass-panel-hover overflow-hidden fade-up hover:border-emerald-500/30 animate-delay-100">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10 opacity-60">
+                        </div>
+                        <img src="assets/images/service-mindfulness.png" alt="Group Sketching Workshop"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 relative z-20 -mt-10">
+                        <div
+                            class="inline-block bg-emerald-900/80 backdrop-blur-sm border border-emerald-500/30 px-4 py-1 rounded-full text-emerald-300 text-xs font-bold uppercase tracking-wide mb-4">
+                            Group Workshop</div>
+                        <h3 class="text-2xl font-display font-medium text-white mb-4">Online Mindful Sketching</h3>
+                        <p class="text-gray-400 mb-6 font-light leading-relaxed">
+                            Connect with others and center yourself through guided sketching exercises in a virtual
+                            group setting.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm text-gray-400">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i>
+                                Stress relief & grounding</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i>
+                                Virtual group discussion</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400"></i>
+                                90-minute Zoom session</li>
+                        </ul>
+                        <div class="flex items-center justify-between pt-6 border-t border-white/10">
+                            <span class="text-2xl font-light text-white">$29 <span
+                                    class="text-sm font-normal text-gray-500">/person</span></span>
+                            <a href="service-details.html"
+                                class="bg-white text-emerald-900 hover:bg-emerald-50 px-6 py-2 rounded-full font-bold text-sm transition-colors uppercase tracking-wider">Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="glass-panel glass-panel-hover overflow-hidden fade-up hover:border-cyan-500/30 animate-delay-200">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10 opacity-60">
+                        </div>
+                        <img src="assets/images/service-counseling.png" alt="Corporate Team Building Retreat"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 relative z-20 -mt-10">
+                        <div
+                            class="inline-block bg-cyan-900/80 backdrop-blur-sm border border-cyan-500/30 px-4 py-1 rounded-full text-cyan-300 text-xs font-bold uppercase tracking-wide mb-4">
+                            Corporate</div>
+                        <h3 class="text-2xl font-display font-medium text-white mb-4">Virtual Team Retreat</h3>
+                        <p class="text-gray-400 mb-6 font-light leading-relaxed">
+                            Boost remote team morale and creativity with our customized corporate virtual art retreats.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm text-gray-400">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Remote
+                                team building</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Custom
+                                themes</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-cyan-400"></i> Digital
+                                participation</li>
+                        </ul>
+                        <div class="flex items-center justify-between pt-6 border-t border-white/10">
+                            <span class="text-2xl font-light text-white">Custom <span
+                                    class="text-sm font-normal text-gray-500">Pricing</span></span>
+                            <a href="contact.html"
+                                class="bg-white text-cyan-900 hover:bg-cyan-50 px-6 py-2 rounded-full font-bold text-sm transition-colors uppercase tracking-wider">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wellness Package Calculator - Ethereal -->
+    <section class="py-20 bg-ethereal-dark relative">
+        <div class="container mx-auto px-6">
+            <div
+                class="max-w-4xl mx-auto bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border border-white/10">
+                <div class="p-8 md:p-12 relative z-10">
+                    <div class="text-center mb-10">
+                        <span
+                            class="text-emerald-400 text-xs font-bold uppercase tracking-widest mb-2 block">Investment</span>
+                        <h2 class="text-5xl md:text-6xl font-display font-bold mb-4 text-white">Plan Your Wellness
+                            Journey</h2>
+                        <p class="text-gray-400 font-light">Estimate your monthly investment in your mental
+                            health with our package calculator.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="space-y-8">
+                            <div>
+                                <label class="form-label">Session
+                                    Type</label>
+                                <div class="relative">
+                                    <select id="session-type" class="form-input appearance-none">
+                                        <option value="49">Individual Therapy ($49)</option>
+                                        <option value="29">Group Workshop ($29)</option>
+                                        <option value="99">Executive Coaching ($99)</option>
+                                    </select>
+                                    <i
+                                        class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="form-label">Frequency</label>
+                                <div class="flex gap-4">
+                                    <label class="flex-1 cursor-pointer">
+                                        <input type="radio" name="freq" value="1" class="peer hidden">
+                                        <div
+                                            class="text-center px-4 py-3 rounded-xl border border-white/20 text-gray-400 peer-checked:bg-teal-600 peer-checked:text-white peer-checked:border-teal-500 transition-all text-sm font-bold">
+                                            Weekly
+                                        </div>
+                                    </label>
+                                    <label class="flex-1 cursor-pointer">
+                                        <input type="radio" name="freq" value="0.5" class="peer hidden" checked>
+                                        <div
+                                            class="text-center px-4 py-3 rounded-xl border border-white/20 text-gray-400 peer-checked:bg-teal-600 peer-checked:text-white peer-checked:border-teal-500 transition-all text-sm font-bold">
+                                            Bi-Weekly
+                                        </div>
+                                    </label>
+                                    <label class="flex-1 cursor-pointer">
+                                        <input type="radio" name="freq" value="0.25" class="peer hidden">
+                                        <div
+                                            class="text-center px-4 py-3 rounded-xl border border-white/20 text-gray-400 peer-checked:bg-teal-600 peer-checked:text-white peer-checked:border-teal-500 transition-all text-sm font-bold">
+                                            Monthly
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="form-label">Duration
+                                    (Months)</label>
+                                <input type="range" id="duration" min="1" max="12" value="3"
+                                    class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-teal-500">
+                                <div class="flex justify-between text-xs text-gray-500 mt-3 font-medium">
+                                    <span>1 Month</span>
+                                    <span id="duration-display" class="font-bold text-teal-400">3 Months</span>
+                                    <span>12 Months</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 flex flex-col justify-center items-center text-center border border-white/5">
+                            <p class="text-gray-400 mb-2 text-sm uppercase tracking-widest">Estimated Total</p>
+                            <div class="text-6xl font-light text-white mb-4">$<span id="total-cost">294</span></div>
+                            <div
+                                class="inline-block bg-teal-500/10 text-teal-300 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-8 border border-teal-500/20">
+                                Includes 10% Package Discount
+                            </div>
+                            <a href="booking.html"
+                                class="w-full bg-white text-teal-900 font-bold py-4 rounded-xl hover:bg-teal-50 transition-colors shadow-lg uppercase tracking-widest text-xs">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Ethereal Dark -->
+    <footer class="bg-ethereal-dark py-16 border-t border-white/10 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="text-3xl font-display font-bold mb-6 text-white">ArtSoul</div>
+                    <p class="text-gray-400 mb-6 font-light">
+                        Contemporary online art therapy & wellness studio.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="hover:text-teal-400 transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Services</a></li>
+                        <li><a href="gallery.html" class="hover:text-teal-400 transition-colors">Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-teal-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Virtual Therapy</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Online Workshops</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Digital
+                                Mindfulness</a></li>
+                        <li><a href="booking.html" class="hover:text-teal-400 transition-colors">Book Session</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Contact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-teal-500"></i>
+                            <span>hello@artsoul.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone mt-1 text-teal-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2025 ArtSoul. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Terms</a>
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

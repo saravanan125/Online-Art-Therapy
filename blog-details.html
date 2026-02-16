@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why You Don't Need to Be an "Artist" - ArtSoul Blog</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-ethereal-dark text-white selection:bg-teal-500 selection:text-white">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-3xl font-display font-bold text-white">
+                    ArtSoul
+                </a>
+                <nav class="hidden md:flex items-center gap-12 text-sm font-medium uppercase tracking-wider">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="services.html" class="text-white border-b-2 border-teal-500 pb-1">Services</a>
+                    <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <a href="booking.html"
+                        class="bg-white text-teal-900 px-8 py-3 text-sm font-bold uppercase tracking-wider hover:bg-teal-50 transition-colors">
+                        Book Now
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-white"><i
+                        class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 border-t border-white/10 absolute w-full">
+            <div class="flex flex-col p-6 space-y-4 font-medium">
+                <a href="index.html" class="text-white hover:text-teal-400">Home</a>
+                <a href="about.html" class="text-white hover:text-teal-400">About Us</a>
+                <a href="services.html" class="text-white hover:text-teal-400">Services</a>
+                <a href="gallery.html" class="text-white hover:text-teal-400">Gallery</a>
+                <a href="blog.html" class="text-white hover:text-teal-400">Blog</a>
+                <a href="contact.html" class="text-white hover:text-teal-400">Contact</a>
+                <div class="border-t border-white/10 pt-4 flex flex-col gap-3">
+                    <a href="login.html" class="text-center text-white hover:text-teal-400">Login</a>
+                    <a href="register.html" class="bg-teal-500 text-white text-center py-2 rounded-lg">Join Studio</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-container pt-32 pb-20" id="main-content">
+        <!-- Background Elements -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-gray-900 to-emerald-900/20"></div>
+            <div class="absolute inset-0 opacity-20 bg-hero-texture"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <span class="text-teal-400 font-bold uppercase tracking-wider text-sm mb-4 block">Mental
+                        Wellness</span>
+                    <h1 class="heading-display text-4xl md:text-6xl mb-6 leading-tight">The Healing Power of Art Therapy
+                        in Digital Spaces</h1>
+                    <div class="flex items-center gap-6 text-sm text-gray-400">
+                        <div class="flex items-center gap-2">
+                            <img src="assets/images/team-sarah.png" alt="Dr. Sarah Jenkin"
+                                class="w-8 h-8 rounded-full object-cover">
+                            <span>Dr. Sarah Jenkin</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-regular fa-calendar"></i>
+                            <span>October 15, 2025</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>5 min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden mb-12 shadow-2xl">
+                    <img src="assets/images/service-art-v2.png" alt="Art Therapy Session"
+                        class="w-full h-[500px] object-cover">
+                </div>
+                <div class="prose dark:prose-invert prose-lg max-w-none text-gray-300">
+                    <p>
+                        One of the most common things I hear from new clients is, "But I can't even draw a stick
+                        figure."
+                        There is a deep-seated belief that to engage in art making, one must be "good" at it.
+                        <br><br>
+                        <strong>Art therapy challenges this notion entirely.</strong>
+                    </p>
+                    <h3 class="text-2xl font-bold text-white my-6">Process Over Product</h3>
+                    <p>
+                        In our studio, we focus on the <em>process</em> of creating, not the final product. The act of
+                        choosing a color that matches your mood, or making a chaotic scribble to release anger, is where
+                        the
+                        healing happens. The aesthetic value of the final piece is irrelevant.
+                    </p>
+                    <div
+                        class="bg-violet-50 dark:bg-violet-900/20 border-l-4 border-teal-500 p-6 my-8 italic text-slate-300">
+                        "Art washes away from the soul the dust of everyday life." — Pablo Picasso
+                    </div>
+                    <h3 class="text-2xl font-bold text-white my-6">Your Inner Critic</h3>
+                    <p>
+                        Art therapy provides a safe space to confront your inner critic. That voice that says "this
+                        looks
+                        ugly" or "you're doing it wrong" is often the same voice that fuels anxiety and self-doubt in
+                        other
+                        areas of your life. By learning to create without judgment, you practice self-compassion.
+                    </p>
+                    <h3 class="text-2xl font-bold text-white my-6">Getting Started</h3>
+                    <p>
+                        If you're hesitant, start small.
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li>Doodle while on the phone.</li>
+                        <li>Use a coloring book.</li>
+                        <li>Play with playdough.</li>
+                    </ul>
+                    <br>
+                    Remember, there is no "right" way to do art therapy. There is only <em>your</em> way.
+                    </p>
+                </div>
+
+                <div class="border-t border-white/10 mt-12 pt-8">
+                    <h3 class="font-bold mb-4 text-white">Share this article</h3>
+                    <div class="flex gap-4">
+                        <button
+                            class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors"><i
+                                class="fa-brands fa-facebook-f"></i></button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-sky-500 text-white flex items-center justify-center hover:bg-sky-600 transition-colors"><i
+                                class="fa-brands fa-twitter"></i></button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-blue-700 text-white flex items-center justify-center hover:bg-blue-800 transition-colors"><i
+                                class="fa-brands fa-linkedin-in"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mx-auto px-6 pb-20 grid md:grid-cols-3 gap-12">
+        <!-- Main Content (empty in this new structure) -->
+        <article class="md:col-span-2">
+            <div class="lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2 article-content text-gray-300 leading-relaxed space-y-6">
+                    <p class="text-lg font-medium text-white">
+                        Art therapy has long been recognized as a powerful tool for emotional expression and healing.
+                        In today's digital age, we're discovering new ways to bring this therapeutic practice to people
+                        wherever they are.
+                    </p>
+                    <p>
+                        Digital art therapy combines traditional psychological techniques with modern technology...
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="space-y-8">
+            <div class="bg-gray-800 p-8 rounded-2xl shadow-lg">
+                <h3 class="font-bold text-lg mb-4 text-white">Search</h3>
+                <div class="relative">
+                    <input type="text" placeholder="Search..."
+                        class="w-full px-4 py-3 rounded-lg border border-gray-700 bg-gray-900 text-white focus:outline-none focus:border-teal-500">
+                    <button class="absolute right-3 top-3 text-gray-400 hover:text-teal-500"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <div class="bg-gray-800 p-8 rounded-2xl shadow-lg">
+                <h3 class="font-bold text-lg mb-4 text-white">Related Articles</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#" class="group flex gap-3">
+                            <img src="https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                class="w-16 h-16 rounded-lg object-cover">
+                            <div>
+                                <h4
+                                    class="font-bold text-sm group-hover:text-teal-400 transition-colors line-clamp-2 text-white">
+                                    5
+                                    Daily Sketching Exercises</h4>
+                                <span class="text-xs text-gray-400">Sep 28, 2025</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="group flex gap-3">
+                            <img src="https://images.unsplash.com/photo-1499728603263-137ad9cd58a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                class="w-16 h-16 rounded-lg object-cover">
+                            <div>
+                                <h4
+                                    class="font-bold text-sm group-hover:text-teal-400 transition-colors line-clamp-2 text-white">
+                                    Neuroscience of Creativity</h4>
+                                <span class="text-xs text-gray-400">Sep 15, 2025</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="bg-gray-900 border-t border-white/10 py-8 text-center text-gray-500 text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 ArtSoul. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

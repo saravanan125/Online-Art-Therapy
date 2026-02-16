@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - ArtSoul</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body
+    class="bg-ethereal-dark text-white selection:bg-teal-500 selection:text-white transition-colors duration-300 min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Background Elements -->
+    <div aria-hidden="true" class="pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-gray-900 to-emerald-900/20"></div>
+        <div class="absolute inset-0 opacity-20 bg-hero-texture"></div>
+        <!-- Floating Orbs -->
+        <div
+            class="absolute top-0 right-0 w-96 h-96 bg-teal-500/10 rounded-full blur-[100px] animate-pulse -translate-y-1/2 translate-x-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[100px] animate-pulse animate-delay-2000 translate-y-1/2 -translate-x-1/2">
+        </div>
+    </div>
+
+    <div class="max-w-2xl w-full text-center relative z-10">
+        <div class="glass-panel p-10 md:p-14 border-t border-white/10">
+            <a href="index.html" class="inline-flex items-center gap-2 text-3xl font-display font-bold text-white mb-8">
+                <i class="fa-solid fa-paintbrush text-teal-400"></i> ArtSoul
+            </a>
+
+            <h1 class="heading-display text-4xl md:text-6xl mb-6 text-white leading-tight">We're Curating Something
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-emerald-200">Beautiful</span>
+            </h1>
+            <p class="text-xl text-body-muted text-gray-300 mb-10 max-w-lg mx-auto">
+                Our new digital wellness studio is currently under construction. Join our waiting list to get notified
+                when we launch.
+            </p>
+
+            <form class="max-w-md mx-auto flex gap-3 relative z-20">
+                <input type="email" placeholder="Enter your email"
+                    class="form-input rounded-full px-6 py-3 bg-white/5 border-white/10 focus:border-teal-400 text-white placeholder-gray-500 w-full">
+                <button class="btn btn-primary rounded-full px-8 whitespace-nowrap">
+                    Notify Me
+                </button>
+            </form>
+
+            <div class="mt-12 text-gray-400 text-sm">
+                <p class="mb-4 uppercase tracking-widest text-xs font-bold text-teal-500/80">Follow our journey</p>
+                <div class="flex justify-center gap-6 text-xl">
+                    <a href="#"
+                        class="hover:text-white hover:scale-110 transition-all duration-300 bg-white/5 p-3 rounded-full hover:bg-teal-500/20"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#"
+                        class="hover:text-white hover:scale-110 transition-all duration-300 bg-white/5 p-3 rounded-full hover:bg-teal-500/20"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#"
+                        class="hover:text-white hover:scale-110 transition-all duration-300 bg-white/5 p-3 rounded-full hover:bg-teal-500/20"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - ArtSoul</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-ethereal-dark text-white font-sans selection:bg-teal-500 selection:text-white relative overflow-hidden">
+
+    <!-- Background Elements -->
+    <div aria-hidden="true" class="pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-gray-900 to-emerald-900/20"></div>
+        <div class="absolute inset-0 opacity-20 mix-blend-overlay bg-hero-texture"></div>
+    </div>
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <div class="min-h-screen flex items-center justify-center p-4 relative z-10">
+        <div class="glass-panel overflow-hidden max-w-4xl w-full grid md:grid-cols-2 shadow-2xl">
+
+            <!-- Illustration Side (Right on Signup for alternate look) -->
+            <div
+                class="bg-gradient-to-br from-purple-900/40 to-pink-900/40 hidden md:flex flex-col items-center justify-center p-12 relative overflow-hidden order-last">
+                <div class="absolute inset-0 opacity-30 mix-blend-overlay bg-hero-texture"></div>
+
+                <!-- Decorative Glows -->
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-64 h-64 bg-teal-500/20 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3">
+                </div>
+
+                <div class="relative z-10 text-center text-white">
+                    <h2 class="text-4xl font-display font-bold mb-4 leading-tight">Start Your <span
+                            class="text-purple-300 italic">Healing</span> Journey</h2>
+                    <p class="mb-8 text-gray-300 font-light text-lg">Join a community dedicated to mental wellness
+                        through art.</p>
+                </div>
+
+                <!-- Floating Icons Animation -->
+                <div class="absolute inset-0 pointer-events-none">
+                    <i
+                        class="fa-solid fa-users-viewfinder text-white/5 absolute top-1/4 right-1/4 text-4xl animate-pulse"></i>
+                    <i
+                        class="fa-solid fa-heart text-white/5 absolute bottom-1/3 left-1/4 text-5xl animate-bounce animate-duration-4000"></i>
+                </div>
+            </div>
+
+            <!-- Form Side -->
+            <div class="p-8 md:p-12 flex flex-col justify-center bg-gray-900/50">
+                <div class="mb-8 text-center md:text-left">
+                    <a href="index.html"
+                        class="text-2xl font-display font-bold text-white flex items-center justify-center md:justify-start gap-2 mb-6 hover:text-teal-400 transition-colors">
+                        <i class="fa-solid fa-paintbrush text-purple-500"></i> ArtSoul
+                    </a>
+                    <h1 class="text-3xl font-display font-bold text-white mb-2">Create Account</h1>
+                    <p class="text-gray-400 text-sm">Already have an account? <a href="login.html"
+                            class="text-teal-400 hover:text-teal-300 hover:underline font-medium">Sign in</a></p>
+                </div>
+
+                <form class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-gray-300">First Name</label>
+                            <input type="text" class="form-input" placeholder="John">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-gray-300">Last Name</label>
+                            <input type="text" class="form-input" placeholder="Doe">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2 text-gray-300">Email Address</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-envelope absolute left-4 top-3.5 text-gray-500"></i>
+                            <input type="email" class="form-input pl-11" placeholder="name@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2 text-gray-300">Password</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-lock absolute left-4 top-3.5 text-gray-500"></i>
+                            <input type="password" class="form-input pl-11" placeholder="••••••••">
+                        </div>
+                    </div>
+
+                    <button
+                        class="btn-primary w-full py-3.5 rounded-xl text-center shadow-lg hover:shadow-purple-500/20 block mt-4">
+                        Sign Up
+                    </button>
+
+                    <p class="text-xs text-center text-gray-400 mt-6">
+                        By creating an account, you agree to our <a href="#" class="text-teal-400 hover:underline">Terms
+                            of Service</a> and <a href="#" class="text-teal-400 hover:underline">Privacy Policy</a>.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

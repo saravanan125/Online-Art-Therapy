@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Virtual Session - ArtSoul</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-ethereal-dark text-white selection:bg-teal-500 selection:text-white">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+
+    <!-- Navigation - Minimal (Matching Home) -->
+    <header class="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-3xl font-display font-bold text-white">
+                    ArtSoul
+                </a>
+                <nav class="hidden md:flex items-center gap-12 text-sm font-medium uppercase tracking-wider">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                    <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="login.html"
+                        class="px-6 py-3 text-sm font-bold uppercase tracking-wider text-white border border-white/30 hover:bg-white/10 transition-colors mr-3">
+                        Login
+                    </a>
+                    <a href="booking.html"
+                        class="bg-white text-teal-900 px-8 py-3 text-sm font-bold uppercase tracking-wider hover:bg-teal-50 transition-colors">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-white/10 transition-colors"
+                        aria-label="Toggle theme">
+                        <i class="fa-regular fa-moon text-gray-300"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-white text-2xl p-2" aria-label="Open menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="hidden fixed inset-0 z-[100] bg-gray-900/95 backdrop-blur-xl animate-fade-in transition-colors duration-300">
+
+        <button id="close-menu-btn"
+            class="absolute top-6 right-6 text-white text-3xl p-2 hover:rotate-90 transition-transform duration-300 z-[110]"
+            aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="h-full w-full flex flex-col items-center justify-start pt-24 pb-8 px-6 overflow-y-auto">
+            <nav class="flex flex-col items-center gap-5 text-lg font-medium uppercase tracking-wider">
+                <a href="index.html" class="text-white hover:text-teal-400 transition-colors">Home</a>
+                <a href="about.html" class="text-white hover:text-teal-400 transition-colors">About</a>
+                <a href="services.html" class="text-white hover:text-teal-400 transition-colors">Services</a>
+                <a href="gallery.html" class="text-white hover:text-teal-400 transition-colors">Gallery</a>
+                <a href="contact.html" class="text-white hover:text-teal-400 transition-colors">Contact</a>
+            </nav>
+            <div class="flex flex-col gap-3 mt-6 w-64">
+                <a href="login.html" class="btn btn-outline btn-full">
+                    Login
+                </a>
+                <a href="booking.html" class="btn btn-primary btn-full">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header - Ethereal -->
+    <section class="section-container pt-40 pb-20" id="main-content">
+        <!-- Background Gradients -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-gray-900 to-emerald-900/20"></div>
+            <div class="absolute inset-0 bg-gradient-booking"></div>
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <span class="inline-flex items-center gap-2 badge badge-glass mb-6 fade-up">
+                <i class="fa-solid fa-calendar-check text-[10px]"></i> Secure Scheduling
+            </span>
+            <h1 class="heading-display text-5xl md:text-7xl mb-6 fade-up text-white">
+                Book Your <span
+                    class="bg-gradient-to-r from-teal-200 to-red-200 bg-clip-text text-transparent italic">Session</span>
+            </h1>
+            <p class="text-body-muted text-gray-300 max-w-2xl mx-auto fade-up animate-delay-100">
+                Your journey to wellness begins here. Select a virtual session type and find a time that works for you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="py-20 bg-transparent relative">
+        <div class="container mx-auto px-6 max-w-4xl">
+
+            <!-- Steps -->
+            <div class="flex justify-between mb-16 relative z-10">
+                <div class="absolute top-1/2 left-0 w-full h-px bg-white/10 -z-10 -translate-y-1/2"></div>
+
+                <div class="flex flex-col items-center bg-gray-900 px-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-teal-500 text-white flex items-center justify-center font-bold mb-2 shadow-[0_0_15px_rgba(20,184,166,0.5)]">
+                        1</div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-teal-400">Service</span>
+                </div>
+                <div class="flex flex-col items-center bg-gray-900 px-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-white/10 text-gray-400 flex items-center justify-center font-bold mb-2 border border-white/10">
+                        2</div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Date & Time</span>
+                </div>
+                <div class="flex flex-col items-center bg-gray-900 px-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-white/10 text-gray-400 flex items-center justify-center font-bold mb-2 border border-white/10">
+                        3</div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Details</span>
+                </div>
+            </div>
+
+            <div class="glass-panel fade-up animate-delay-200">
+                <div class="p-8 md:p-12">
+                    <h2 class="text-2xl font-display font-medium text-white mb-8">Select a Virtual Service</h2>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-12">
+                        <!-- Option 1 -->
+                        <label class="cursor-pointer group relative">
+                            <input type="radio" name="service" checked class="peer hidden">
+                            <div
+                                class="h-full glass-panel p-6 transition-all duration-300 peer-checked:bg-teal-500/10 peer-checked:border-teal-500 hover:bg-white/10">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3
+                                        class="font-bold text-lg text-white group-hover:text-teal-200 transition-colors">
+                                        Expressive Painting</h3>
+                                    <div
+                                        class="w-5 h-5 rounded-full border border-white/30 peer-checked:bg-teal-500 peer-checked:border-teal-500 flex items-center justify-center">
+                                        <i
+                                            class="fa-solid fa-check text-[10px] text-white opacity-0 peer-checked:opacity-100"></i>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-400 mb-4 font-light"><i
+                                        class="fa-solid fa-video text-teal-500 mr-2"></i> 1 Hour • Secure Video Call</p>
+                                <p class="font-bold text-xl text-white">$49.00</p>
+                            </div>
+                        </label>
+
+                        <!-- Option 2 -->
+                        <label class="cursor-pointer group relative">
+                            <input type="radio" name="service" class="peer hidden">
+                            <div
+                                class="h-full glass-panel p-6 transition-all duration-300 peer-checked:bg-emerald-500/10 peer-checked:border-emerald-500 hover:bg-white/10">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3
+                                        class="font-bold text-lg text-white group-hover:text-emerald-200 transition-colors">
+                                        Mindfulness Sketching</h3>
+                                    <div
+                                        class="w-5 h-5 rounded-full border border-white/30 peer-checked:bg-emerald-500 peer-checked:border-emerald-500 flex items-center justify-center">
+                                        <i
+                                            class="fa-solid fa-check text-[10px] text-white opacity-0 peer-checked:opacity-100"></i>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-400 mb-4 font-light"><i
+                                        class="fa-solid fa-video text-emerald-500 mr-2"></i> 1 Hour • Secure Video Call
+                                </p>
+                                <p class="font-bold text-xl text-white">$49.00</p>
+                            </div>
+                        </label>
+
+                        <!-- Option 3 -->
+                        <label class="cursor-pointer group relative">
+                            <input type="radio" name="service" class="peer hidden">
+                            <div
+                                class="h-full glass-panel p-6 transition-all duration-300 peer-checked:bg-cyan-500/10 peer-checked:border-cyan-500 hover:bg-white/10">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3
+                                        class="font-bold text-lg text-white group-hover:text-cyan-200 transition-colors">
+                                        Group Art Circle</h3>
+                                    <div
+                                        class="w-5 h-5 rounded-full border border-white/30 peer-checked:bg-cyan-500 peer-checked:border-cyan-500 flex items-center justify-center">
+                                        <i
+                                            class="fa-solid fa-check text-[10px] text-white opacity-0 peer-checked:opacity-100"></i>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-400 mb-4 font-light"><i
+                                        class="fa-solid fa-users-viewfinder text-cyan-500 mr-2"></i> 90 Mins • Group
+                                    Zoom</p>
+                                <p class="font-bold text-xl text-white">$29.00</p>
+                            </div>
+                        </label>
+
+                        <!-- Option 4 -->
+                        <label class="cursor-pointer group relative">
+                            <input type="radio" name="service" class="peer hidden">
+                            <div
+                                class="h-full glass-panel p-6 transition-all duration-300 peer-checked:bg-teal-500/10 peer-checked:border-teal-500 hover:bg-white/10">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3
+                                        class="font-bold text-lg text-white group-hover:text-teal-200 transition-colors">
+                                        Initial Consultation</h3>
+                                    <div
+                                        class="w-5 h-5 rounded-full border border-white/30 peer-checked:bg-teal-500 peer-checked:border-teal-500 flex items-center justify-center">
+                                        <i
+                                            class="fa-solid fa-check text-[10px] text-white opacity-0 peer-checked:opacity-100"></i>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-gray-400 mb-4 font-light"><i
+                                        class="fa-solid fa-video text-teal-500 mr-2"></i> 30 Mins • Video Call</p>
+                                <p class="font-bold text-xl text-white">Free</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="flex justify-between items-center border-t border-white/10 pt-8">
+                        <button class="text-gray-500 hover:text-white transition-colors font-medium px-6 py-2"
+                            disabled>Back</button>
+                        <button
+                            class="bg-white text-teal-900 hover:bg-teal-50 px-8 py-3 rounded-xl font-bold uppercase tracking-wider text-sm transition-colors shadow-lg">Continue
+                            to Date & Time</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Note -->
+            <div class="text-center mt-8 text-sm text-gray-500 font-light">
+                <p><i class="fa-solid fa-lock mr-2 text-teal-500"></i> Your connection is secure. All video sessions are
+                    encrypted.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Ethereal Dark -->
+    <footer class="bg-gray-900 py-16 border-t border-white/10 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="text-3xl font-display font-bold mb-6 text-white">ArtSoul</div>
+                    <p class="text-gray-400 mb-6 font-light">
+                        Contemporary online art therapy & wellness studio.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-teal-400 hover:text-teal-400 transition-colors">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Navigation</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="hover:text-teal-400 transition-colors">About</a></li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Services</a></li>
+                        <li><a href="gallery.html" class="hover:text-teal-400 transition-colors">Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-teal-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Virtual Therapy</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Online Workshops</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-teal-400 transition-colors">Digital
+                                Mindfulness</a></li>
+                        <li><a href="booking.html" class="hover:text-teal-400 transition-colors">Book Session</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-sm uppercase tracking-wider mb-6 text-white">Contact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-teal-500"></i>
+                            <span>hello@artsoul.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-phone mt-1 text-teal-500"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2025 ArtSoul. All rights reserved.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Terms</a>
+                    <a href="#" class="text-gray-500 hover:text-teal-400 transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

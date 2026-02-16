@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed - ArtSoul</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-ethereal-dark text-white selection:bg-teal-500 selection:text-white">
+
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-3xl font-display font-bold text-white">
+                    ArtSoul
+                </a>
+                <nav class="hidden md:flex items-center gap-12 text-sm font-medium uppercase tracking-wider">
+                    <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                    <a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                    <a href="services.html" class="text-gray-400 hover:text-white transition-colors">Services</a>
+                    <a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center">
+                    <a href="login.html"
+                        class="px-6 py-3 text-sm font-bold uppercase tracking-wider text-white border border-white/30 hover:bg-white/10 transition-colors mr-3">
+                        Login
+                    </a>
+                    <a href="booking.html"
+                        class="bg-white text-teal-900 px-8 py-3 text-sm font-bold uppercase tracking-wider hover:bg-teal-50 transition-colors">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Success Section -->
+    <section class="section-container min-h-screen flex items-center justify-center pt-20" id="main-content">
+        <!-- Ethereal Background -->
+        <div aria-hidden="true" class="pointer-events-none">
+            <div class="absolute inset-0 bg-gradient-to-br from-teal-500/20 via-emerald-500/20 to-cyan-500/20 z-0">
+            </div>
+            <div class="absolute inset-0 bg-gradient-confirmation"></div>
+
+            <!-- Floating Celebration Orbs -->
+            <div class="absolute top-20 left-10 w-32 h-32 bg-teal-400/20 rounded-full blur-3xl animate-pulse">
+            </div>
+            <div
+                class="absolute bottom-20 right-20 w-40 h-40 bg-emerald-400/20 rounded-full blur-3xl animate-pulse animate-delay-1000">
+            </div>
+            <div
+                class="absolute top-1/3 right-1/4 w-24 h-24 bg-cyan-400/20 rounded-full blur-3xl animate-pulse animate-delay-2000">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+
+                <!-- Success Icon Animation -->
+                <div class="mb-8 fade-up">
+                    <div
+                        class="w-24 h-24 mx-auto bg-teal-500/20 rounded-full flex items-center justify-center border-4 border-teal-500 animate-pulse-glow">
+                        <i class="fa-solid fa-check text-5xl text-teal-400"></i>
+                    </div>
+                </div>
+
+                <!-- Success Message -->
+                <h1 class="heading-display text-5xl md:text-6xl mb-6 fade-up">
+                    You're <span
+                        class="bg-gradient-to-r from-teal-200 to-red-200 bg-clip-text text-transparent italic">All
+                        Set!</span>
+                </h1>
+                <p class="text-body-muted text-gray-300 mb-12 fade-up animate-delay-100">
+                    Your virtual art therapy session has been confirmed. We've sent a confirmation email with all the
+                    details.
+                </p>
+
+                <!-- Booking Summary Card -->
+                <div class="glass-panel p-8 md:p-12 mb-8 text-left fade-up animate-delay-200">
+                    <h2 class="text-2xl font-display font-bold text-white mb-6 flex items-center gap-3">
+                        <i class="fa-solid fa-calendar-check text-teal-400"></i>
+                        Booking Summary
+                    </h2>
+
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start border-b border-white/10 pb-4">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Service</p>
+                                <p class="text-lg font-bold text-white">Expressive Painting</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm text-gray-400 mb-1">Duration</p>
+                                <p class="text-lg font-bold text-white">1 Hour</p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-start border-b border-white/10 pb-4">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Date & Time</p>
+                                <p class="text-lg font-bold text-white">Monday, Feb 15, 2026</p>
+                                <p class="text-sm text-teal-400">2:00 PM - 3:00 PM (EST)</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm text-gray-400 mb-1">Meeting Type</p>
+                                <p class="text-lg font-bold text-white">Secure Video</p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Therapist</p>
+                                <p class="text-lg font-bold text-white">Dr. Sarah Jenkin</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm text-gray-400 mb-1">Fee</p>
+                                <p class="text-2xl font-bold text-teal-400">$49.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-teal-500/10 backdrop-blur-sm rounded-2xl border border-teal-500/30 p-6 mb-8 fade-up animate-delay-300">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-regular fa-lightbulb text-teal-400"></i>
+                        What Happens Next?
+                    </h3>
+                    <ul class="text-left space-y-3 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-teal-400"></i>
+                            <span>Check your email for the Zoom meeting link and session details</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-bell mt-1 text-teal-400"></i>
+                            <span>You'll receive a reminder 24 hours before your session</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-palette mt-1 text-teal-400"></i>
+                            <span>Prepare your art materials (if applicable) before the session</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-up animate-delay-400">
+                    <button onclick="downloadICS()"
+                        class="btn-secondary px-8 py-4 rounded-xl font-bold uppercase tracking-wider text-sm shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calendar-plus"></i>
+                        Add to Calendar
+                    </button>
+                    <a href="index.html"
+                        class="btn-outline px-8 py-4 rounded-xl font-bold uppercase tracking-wider text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-home"></i>
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-white/10 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-400 text-sm">
+            <p>© 2025 ArtSoul. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Download ICS calendar file
+        function downloadICS() {
+            const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ArtSoul//Booking//EN
+BEGIN:VEVENT
+UID:${Date.now()}@artsoul.com
+DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').split('.')[0]}Z
+DTSTART:20260215T190000Z
+DTEND:20260215T200000Z
+SUMMARY:Art Therapy Session - Expressive Painting
+DESCRIPTION:Virtual art therapy session with Dr. Sarah Jenkin\\nMeeting link will be sent via email
+LOCATION:Zoom (Online)
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+
+            const blob = new Blob([icsContent], { type: 'text/calendar' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = 'artsoul-session.ics';
+            link.click();
+        }
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
